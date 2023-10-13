@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e681738be0f7844c9afe7fa9efae13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _topicName: Rear_Cam
   _frame_id: camera
 --- !u!114 &55393177
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1478023f72437a1488d09d4c2a1759c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
 --- !u!81 &55393178
@@ -6219,10 +6219,10 @@ MonoBehaviour:
   wheelRR: {fileID: 1708479488}
   mode: 0
   maxLinearSpeed: 2
-  maxRotationalSpeed: 999999
+  maxRotationalSpeed: 10
   wheelRadius: 0.033
   trackWidth: 0.288
-  forceLimit: 999999
+  forceLimit: 50
   damping: 10
   ROSTimeout: 0.5
 --- !u!114 &550554244
@@ -6270,8 +6270,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550554242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.7127633, y: 1.5965996, z: 6.9960074}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -6.7, y: 1.5, z: 6.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6279,7 +6279,7 @@ Transform:
   - {fileID: 1142050026}
   m_Father: {fileID: 777130658}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &555348584
 GameObject:
   m_ObjectHideFlags: 0
@@ -14318,7 +14318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e681738be0f7844c9afe7fa9efae13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _topicName: Front_Left_Cam
   _frame_id: camera
 --- !u!114 &1148824747
@@ -14333,7 +14333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1478023f72437a1488d09d4c2a1759c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
 --- !u!81 &1148824748
@@ -16471,7 +16471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e681738be0f7844c9afe7fa9efae13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _topicName: Rear_Left_Cam
   _frame_id: camera
 --- !u!114 &1394132057
@@ -16486,7 +16486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1478023f72437a1488d09d4c2a1759c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
 --- !u!81 &1394132058
@@ -16632,7 +16632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e681738be0f7844c9afe7fa9efae13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _topicName: Front_Right_Cam
   _frame_id: camera
 --- !u!114 &1408383909
@@ -16647,7 +16647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1478023f72437a1488d09d4c2a1759c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
 --- !u!81 &1408383910
@@ -22427,7 +22427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e681738be0f7844c9afe7fa9efae13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _topicName: Rear_Right_Cam
   _frame_id: camera
 --- !u!114 &1675309427
@@ -22442,7 +22442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1478023f72437a1488d09d4c2a1759c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
 --- !u!81 &1675309428
@@ -22543,7 +22543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e681738be0f7844c9afe7fa9efae13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _topicName: Front_Cam
   _frame_id: camera
 --- !u!114 &1682169145
@@ -22558,7 +22558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1478023f72437a1488d09d4c2a1759c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
+  _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
 --- !u!81 &1682169146
