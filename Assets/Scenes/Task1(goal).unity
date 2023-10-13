@@ -6301,6 +6301,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   Target: {fileID: 550554246}
+  forceMultiplier: 10
 --- !u!114 &550554248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6317,15 +6318,15 @@ MonoBehaviour:
     VectorObservationSize: 4
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 0
-      BranchSizes: 05000000
-    VectorActionSize: 05000000
+      m_NumContinuousActions: 2
+      BranchSizes: 
+    VectorActionSize: 02000000
     VectorActionDescriptions: []
-    VectorActionSpaceType: 0
+    VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 1
+  m_BehaviorType: 0
   m_BehaviorName: Task1(goal)
   TeamId: 0
   m_UseChildSensors: 1
