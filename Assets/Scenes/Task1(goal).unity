@@ -5314,7 +5314,7 @@ Transform:
   - {fileID: 469542780}
   - {fileID: 1009435961}
   m_Father: {fileID: 1142050026}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &498836475
 MonoBehaviour:
@@ -5396,9 +5396,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0
-  m_AngularDamping: 0
-  m_JointFriction: 0
+  m_LinearDamping: 0.05
+  m_AngularDamping: 0.05
+  m_JointFriction: 0.05
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -6194,10 +6194,10 @@ GameObject:
   - component: {fileID: 550554245}
   - component: {fileID: 550554244}
   - component: {fileID: 550554243}
-  - component: {fileID: 550554247}
-  - component: {fileID: 550554249}
   - component: {fileID: 550554248}
+  - component: {fileID: 550554249}
   - component: {fileID: 550554250}
+  - component: {fileID: 550554251}
   m_Layer: 0
   m_Name: husky
   m_TagString: robot
@@ -6221,12 +6221,12 @@ MonoBehaviour:
   wheelFR: {fileID: 498836473}
   wheelRL: {fileID: 1636303326}
   wheelRR: {fileID: 1708479488}
-  mode: 0
+  mode: 1
   maxLinearSpeed: 2
   maxRotationalSpeed: 10
   wheelRadius: 0.033
   trackWidth: 0.288
-  forceLimit: 50
+  forceLimit: 10
   damping: 10
   ROSTimeout: 0.5
 --- !u!114 &550554244
@@ -6284,24 +6284,6 @@ Transform:
   m_Father: {fileID: 777130658}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &550554247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 550554242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deec20dc75f03fdcab13e87282f265d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 5000
-  Target: {fileID: 550554246}
-  forceMultiplier: 10
 --- !u!114 &550554248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6333,7 +6315,59 @@ MonoBehaviour:
   m_UseChildActuators: 1
   m_DeterministicInference: 0
   m_ObservableAttributeHandling: 0
---- !u!114 &550554249
+--- !u!171741748 &550554249
+ArticulationBody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550554242}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Mass: 1
+  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_AnchorPosition: {x: 0, y: 0, z: 0}
+  m_AnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_MatchAnchors: 1
+  m_ArticulationJointType: 0
+  m_LinearX: 2
+  m_LinearY: 2
+  m_LinearZ: 2
+  m_SwingY: 2
+  m_SwingZ: 2
+  m_Twist: 2
+  m_XDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_YDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_ZDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_LinearDamping: 0.05
+  m_AngularDamping: 0.05
+  m_JointFriction: 0.05
+  m_Immovable: 0
+  m_UseGravity: 1
+  m_CollisionDetectionMode: 0
+--- !u!114 &550554250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6347,22 +6381,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 10
   TakeActionsBetweenDecisions: 1
---- !u!54 &550554250
-Rigidbody:
+--- !u!114 &550554251
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550554242}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc910ea3496c36a808e7e39175977aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 5000
+  Wheels:
+  - {fileID: 749988603}
+  - {fileID: 498836477}
+  - {fileID: 1636303330}
+  - {fileID: 1708479491}
+  Target: {fileID: 1349975691}
 --- !u!1 &555348584
 GameObject:
   m_ObjectHideFlags: 0
@@ -8553,7 +8593,7 @@ Transform:
   - {fileID: 301596039}
   - {fileID: 1072405509}
   m_Father: {fileID: 1142050026}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &749988601
 MonoBehaviour:
@@ -8635,9 +8675,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0
-  m_AngularDamping: 0
-  m_JointFriction: 0
+  m_LinearDamping: 0.05
+  m_AngularDamping: 0.05
+  m_JointFriction: 0.05
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -14100,10 +14140,10 @@ Transform:
   - {fileID: 2048306863}
   - {fileID: 1758925113}
   - {fileID: 1340344928}
-  - {fileID: 1708479493}
-  - {fileID: 1636303327}
-  - {fileID: 498836474}
   - {fileID: 749988600}
+  - {fileID: 498836474}
+  - {fileID: 1636303327}
+  - {fileID: 1708479493}
   - {fileID: 555348585}
   - {fileID: 1544796808}
   m_Father: {fileID: 550554246}
@@ -14545,13 +14585,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2067077026989913257, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_Name
       value: maze
       objectReference: {fileID: 0}
+    - target: {fileID: 1351844646615357348, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688111480887514414, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4087270197095684014, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053092741488696281, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
@@ -21102,7 +21158,7 @@ Transform:
   - {fileID: 1405147538}
   - {fileID: 1072216711}
   m_Father: {fileID: 1142050026}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1636303328
 MonoBehaviour:
@@ -21184,9 +21240,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0
-  m_AngularDamping: 0
-  m_JointFriction: 0
+  m_LinearDamping: 0.05
+  m_AngularDamping: 0.05
+  m_JointFriction: 0.05
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -22795,9 +22851,9 @@ ArticulationBody:
     forceLimit: 3.4028235e+38
     target: 0
     targetVelocity: 0
-  m_LinearDamping: 0
-  m_AngularDamping: 0
-  m_JointFriction: 0
+  m_LinearDamping: 0.05
+  m_AngularDamping: 0.05
+  m_JointFriction: 0.05
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
@@ -22829,7 +22885,7 @@ Transform:
   - {fileID: 1854557726}
   - {fileID: 305379278}
   m_Father: {fileID: 1142050026}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1710187005
 PrefabInstance:
