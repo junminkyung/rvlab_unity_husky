@@ -1,26 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
+// using System.Collections;
+// using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+// using UnityEngine.UI;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using Unity.Robotics.UrdfImporter.Control;
 
-public class TestAgent : Agent
+public class HuskyAgent : Agent
 {   
-    ArticulationBody aBody;
+    public ArticulationBody aBody;
     public float maxLinearSpeed = 5.0f; // m/s
     private float _wheelRadius = 0.330f; // m
-    public float _maxrotspeed; // m/s
+    private float trackWidth = 0.288f; // m
+    public float _maxrotspeed = 50000; // m/s
     private float _damping = 400; // N*s/m
-    private float _SpeedSensitivity = 1;
+    float _SpeedSensitivity = 1;
     private float _DampingSensitivity = 1;
-    public Transform WallE;
-    public Transform WallN;
-    public Transform WallS;
-    public Transform WallW;
-    private float forceLimit = 500;
+    float _Sensitivity = 0.2f;
+    private float forceLimit = 50;
+    
+    public Transform Target;
+
     public GameObject wheelFL; // Front left wheel
     public GameObject wheelFR; // Front right wheel
     public GameObject wheelRL; // Rear left wheel
@@ -30,13 +31,11 @@ public class TestAgent : Agent
     private ArticulationBody wA3;
     private ArticulationBody wA4;
     private RotationDirection direction;
-    public float episodeTimeoutSeconds = 60.0f; // 에피소드의 최대 시간 (예: 60초)
 
-    private float episodeStartTime; // 에피소드 시작 시간
 
     void Start()
-    {
-        _maxrotspeed = Mathf.Rad2Deg * maxLinearSpeed / _wheelRadius;
+    {   
+        // _maxrotspeed = Mathf.Rad2Deg * maxLinearSpeed / _wheelRadius;
         aBody = GetComponent<ArticulationBody>(); 
         wA1 = wheelFL.GetComponent<ArticulationBody>();
         wA2 = wheelFR.GetComponent<ArticulationBody>();
@@ -48,7 +47,7 @@ public class TestAgent : Agent
         Set_Properties(wA4);
     }
 
-    void Drive(ArticulationBody joint, float wheelSpeed = float.NaN)
+    private void Drive(ArticulationBody joint, float wheelSpeed = float.NaN)
     {
         ArticulationDrive drive = joint.xDrive;
         if (float.IsNaN(wheelSpeed))
@@ -62,32 +61,38 @@ public class TestAgent : Agent
         joint.xDrive = drive;
     }
 
-    void RL(float _Forward, float _Rot)
-    {   
-        float max_1 = Mathf.Max(Mathf.Abs(_Forward) + Mathf.Abs(_Rot), 1.0f);
-        float L_Rot = (_Forward + _Rot) * _maxrotspeed / max_1 * _SpeedSensitivity;
-        float R_Rot = (_Forward - _Rot) * _maxrotspeed / max_1 * _SpeedSensitivity;
-        Drive(wA1, L_Rot);
-        Drive(wA2, R_Rot);
-        Drive(wA3, L_Rot);
-        Drive(wA4, R_Rot);
+    private void RL(float _Forward, float _Rot)
+    {
+        float Speed = -_Forward * maxLinearSpeed;
+        float Rot_Speed = -_Rot * _maxrotspeed;
+
+        float wheelRotation = (Speed / _wheelRadius) * Mathf.Rad2Deg;
+
+        float Diff_Speed = Rot_Speed * trackWidth;
+
+        float L_Speed = wheelRotation - (Diff_Speed / 2);
+        float R_Speed = wheelRotation + (Diff_Speed / 2);
+
+        Drive(wA1, L_Speed);
+        Drive(wA2, R_Speed);
+        Drive(wA3, L_Speed);
+        Drive(wA4, R_Speed);
     }
 
-    void Set_Properties(ArticulationBody joint)
+   private void Set_Properties(ArticulationBody joint)
     {
         ArticulationDrive drive = joint.xDrive;
         drive.damping = _damping * _DampingSensitivity;
         joint.xDrive = drive;
         drive.forceLimit = forceLimit;
     }
-
-    public Transform Target;
+    
     public override void OnEpisodeBegin()
     {   
         aBody.transform.localPosition = new Vector3 (-6.7f, 1.5f, 6.7f);
-        Target.localPosition = new Vector3(Random.value * 10 - 5,
-                                           2.0f,
-                                           Random.value * 10 - 5);
+        Target.localPosition = new Vector3(Random.value * 10 - 5, 
+                                            2.0f, 
+                                            Random.value * 10 - 5);
 
         aBody.TeleportRoot(aBody.transform.localPosition, Quaternion.Euler(0f, 90f, 0f));
         aBody.angularVelocity = Vector3.zero;
@@ -98,7 +103,7 @@ public class TestAgent : Agent
     {   
         // 목적지(Target)와 로봇(Agent)의 위치 좌표
         sensor.AddObservation(Target.localPosition);
-        sensor.AddObservation(aBody.transform.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
 
         // 로봇(Agent)의 속도 정보 수집
         sensor.AddObservation(aBody.velocity.x);
@@ -116,41 +121,14 @@ public class TestAgent : Agent
         RL(moveZ, moveX);
 
         // Agent와 Target사이의 거리를 측정
-        float distanceToTarget = Vector3.Distance(aBody.transform.localPosition, Target.localPosition);
-        float distanceToWallE = Vector3.Distance(aBody.transform.localPosition, WallE.localPosition);
-        float distanceToWallN = Vector3.Distance(aBody.transform.localPosition, WallN.localPosition);
-        float distanceToWallS = Vector3.Distance(aBody.transform.localPosition, WallS.localPosition);
-        float distanceToWallW = Vector3.Distance(aBody.transform.localPosition, WallW.localPosition);
+        float distanceToTarget = Vector3.Distance(this.transform.localPosition, Target.localPosition);
 
-        // Target에 도달하는 경우 (거리가 1.4보다 작은 경우) Episode 종료
-        if (distanceToTarget < 2.0f)
+        // Target에 도달하는 경우 (거리가 1.42보다 작은 경우) Episode 종료
+        if (distanceToTarget < 1.2)
         {
-            SetReward(2.0f);
+            SetReward(1.0f);
             EndEpisode();
         }
-
-        if (distanceToWallE < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
-        else if (distanceToWallN < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
-        else if (distanceToWallS < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
-        else if (distanceToWallW < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
-
-        if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
-        {
-            EndEpisode();
-        }
-        
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
