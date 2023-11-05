@@ -102,13 +102,13 @@ public class HuskyDrive : Agent
     {   
         float LinearSpeed = _Forward * maxLinearSpeed;
         float RotSpeed = _Rot * maxRotSpeed;
-        // Debug.Log($"LinearSpeed: {LinearSpeed}");
-        // Debug.Log($"RotSpeed: {RotSpeed}");
+        Debug.Log($"LinearSpeed: {LinearSpeed}");
+        Debug.Log($"RotSpeed: {RotSpeed}");
 
         float L_Rot = LinearSpeed  - (RotSpeed * trackWidth * 0.5f);
         float R_Rot = LinearSpeed  + (RotSpeed * trackWidth * 0.5f);
-        // Debug.Log($"L_Rot: {L_Rot}");
-        // Debug.Log($"R_Rot: {R_Rot}");
+        Debug.Log($"L_Rot: {L_Rot}");
+        Debug.Log($"R_Rot: {R_Rot}");
 
         Drive(wA1, L_Rot);
         Drive(wA2, R_Rot);
@@ -141,19 +141,32 @@ public class HuskyDrive : Agent
             EndEpisode();
         }
 
-        AddReward(-0.001f);
+        AddReward(-0.01f);
     }
 
     void OnCollisionEnter(Collision coll)
     {
+        // if (coll.collider.CompareTag("Target"))
+        // {
+        //     AddReward(1.0f);
+        //     EndEpisode();
+        // }
+
         if (coll.collider.CompareTag("Wall"))
         {   
             Debug.Log("Hit Wall");
             AddReward(-0.1f);
             EndEpisode();
         }
-    }
 
+        if (coll.collider.CompareTag("Partition"))
+        {   
+            Debug.Log("Hit Partition");
+            AddReward(-0.1f);
+            EndEpisode();
+        }
+    }
+    
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         var continuousActionsOut = actionsOut.ContinuousActions;

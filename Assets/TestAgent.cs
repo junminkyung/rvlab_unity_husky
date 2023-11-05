@@ -9,17 +9,17 @@ using Unity.Robotics.UrdfImporter.Control;
 
 public class TestAgent : Agent
 {   
-    ArticulationBody aBody;
+    public ArticulationBody aBody;
     public float maxLinearSpeed = 5.0f; // m/s
     private float _wheelRadius = 0.330f; // m
     public float _maxrotspeed; // m/s
     private float _damping = 400; // N*s/m
     private float _SpeedSensitivity = 1;
     private float _DampingSensitivity = 1;
-    public Transform WallE;
-    public Transform WallN;
-    public Transform WallS;
-    public Transform WallW;
+    // public Transform WallE;
+    // public Transform WallN;
+    // public Transform WallS;
+    // public Transform WallW;
     private float forceLimit = 500;
     public GameObject wheelFL; // Front left wheel
     public GameObject wheelFR; // Front right wheel
@@ -84,12 +84,12 @@ public class TestAgent : Agent
     public Transform Target;
     public override void OnEpisodeBegin()
     {   
-        aBody.transform.localPosition = new Vector3 (-6.7f, 1.5f, 6.7f);
+        // aBody.transform.localPosition = new Vector3 (-6.7f, 1.5f, 6.7f);
         Target.localPosition = new Vector3(Random.value * 10 - 5,
                                            2.0f,
                                            Random.value * 10 - 5);
 
-        aBody.TeleportRoot(aBody.transform.localPosition, Quaternion.Euler(0f, 90f, 0f));
+        aBody.TeleportRoot(new Vector3 (-6.7f, 1.5f, 6.7f), Quaternion.Euler(0f, 90f, 0f));
         aBody.angularVelocity = Vector3.zero;
         aBody.velocity = Vector3.zero;
     }
@@ -105,6 +105,17 @@ public class TestAgent : Agent
         sensor.AddObservation(aBody.velocity.z);
     }
 
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if(collision.gameObject.CompareTag("Wall"))
+    //     {   //벽에 닿으면 AddReward -0.5점
+    //         Debug.Log("Hit Wall");
+    //         AddReward(-0.1f);
+    //         EndEpisode();
+    //     }
+
+    // }
+
     public override void OnActionReceived(ActionBuffers actionBuffers)
     {   
         base.OnActionReceived(actionBuffers);
@@ -117,39 +128,39 @@ public class TestAgent : Agent
 
         // Agent와 Target사이의 거리를 측정
         float distanceToTarget = Vector3.Distance(aBody.transform.localPosition, Target.localPosition);
-        float distanceToWallE = Vector3.Distance(aBody.transform.localPosition, WallE.localPosition);
-        float distanceToWallN = Vector3.Distance(aBody.transform.localPosition, WallN.localPosition);
-        float distanceToWallS = Vector3.Distance(aBody.transform.localPosition, WallS.localPosition);
-        float distanceToWallW = Vector3.Distance(aBody.transform.localPosition, WallW.localPosition);
+        // float distanceToWallE = Vector3.Distance(aBody.transform.localPosition, WallE.localPosition);
+        // float distanceToWallN = Vector3.Distance(aBody.transform.localPosition, WallN.localPosition);
+        // float distanceToWallS = Vector3.Distance(aBody.transform.localPosition, WallS.localPosition);
+        // float distanceToWallW = Vector3.Distance(aBody.transform.localPosition, WallW.localPosition);
 
         // Target에 도달하는 경우 (거리가 1.4보다 작은 경우) Episode 종료
-        if (distanceToTarget < 2.0f)
+        if (distanceToTarget < 1.8f)
         {
-            SetReward(2.0f);
+            SetReward(1.0f);
             EndEpisode();
         }
 
-        if (distanceToWallE < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
-        else if (distanceToWallN < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
-        else if (distanceToWallS < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
-        else if (distanceToWallW < 0.1f)
-        {
-            SetReward(-0.5f);
-        }
+        // if (distanceToWallE < 1.0f)
+        // {
+        //     SetReward(-0.1f);
+        // }
+        // else if (distanceToWallN < 0.1f)
+        // {
+        //     SetReward(-0.1f);
+        // }
+        // else if (distanceToWallS < 0.1f)
+        // {
+        //     SetReward(-0.1f);
+        // }
+        // else if (distanceToWallW < 0.1f)
+        // {
+        //     SetReward(-0.1f);
+        // }
 
-        if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
-        {
-            EndEpisode();
-        }
+        // if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
+        // {
+        //     EndEpisode();
+        // }
         
     }
 

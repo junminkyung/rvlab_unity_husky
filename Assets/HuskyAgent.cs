@@ -1,10 +1,7 @@
-// using System.Collections;
-// using System.Collections.Generic;
-using UnityEngine;
-// using UnityEngine.UI;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using UnityEngine;
 using Unity.Robotics.UrdfImporter.Control;
 
 public class HuskyAgent : Agent
@@ -13,11 +10,11 @@ public class HuskyAgent : Agent
     public float maxLinearSpeed = 5.0f; // m/s
     private float _wheelRadius = 0.330f; // m
     private float trackWidth = 0.288f; // m
-    public float _maxrotspeed = 50000; // m/s
-    private float _damping = 400; // N*s/m
-    float _SpeedSensitivity = 1;
+    public float _maxrotspeed = 100; // m/s
+    private float _damping = 100; // N*s/m
+    // float _SpeedSensitivity = 1;
     private float _DampingSensitivity = 1;
-    float _Sensitivity = 0.2f;
+    // float _Sensitivity = 0.2f;
     private float forceLimit = 50;
     
     public Transform Target;
@@ -32,10 +29,12 @@ public class HuskyAgent : Agent
     private ArticulationBody wA4;
     private RotationDirection direction;
 
+    public float episodeTimeoutSeconds = 60.0f; // 에피소드의 최대 시간 (예: 60초)
+
+    private float episodeStartTime; // 에피소드 시작 시간
 
     void Start()
     {   
-        // _maxrotspeed = Mathf.Rad2Deg * maxLinearSpeed / _wheelRadius;
         aBody = GetComponent<ArticulationBody>(); 
         wA1 = wheelFL.GetComponent<ArticulationBody>();
         wA2 = wheelFR.GetComponent<ArticulationBody>();
@@ -89,12 +88,13 @@ public class HuskyAgent : Agent
     
     public override void OnEpisodeBegin()
     {   
+        episodeStartTime = Time.time;
         aBody.transform.localPosition = new Vector3 (-6.7f, 1.5f, 6.7f);
         Target.localPosition = new Vector3(Random.value * 10 - 5, 
                                             2.0f, 
                                             Random.value * 10 - 5);
 
-        aBody.TeleportRoot(aBody.transform.localPosition, Quaternion.Euler(0f, 90f, 0f));
+        aBody.TeleportRoot(aBody.transform.localPosition, Quaternion.Euler(0f, 180f, 0f));
         aBody.angularVelocity = Vector3.zero;
         aBody.velocity = Vector3.zero;
     }
@@ -123,12 +123,25 @@ public class HuskyAgent : Agent
         // Agent와 Target사이의 거리를 측정
         float distanceToTarget = Vector3.Distance(this.transform.localPosition, Target.localPosition);
 
-        // Target에 도달하는 경우 (거리가 1.42보다 작은 경우) Episode 종료
+        // Target에 도달하는 경우 (거리가 1.4보다 작은 경우) Episode 종료
         if (distanceToTarget < 1.2)
         {
             SetReward(1.0f);
             EndEpisode();
         }
+
+        if (aBody.transform.localPosition.y < 0.1f)
+        {
+            EndEpisode();
+            SetReward(-1.0f);
+        }
+
+        if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
+        {
+            EndEpisode();
+        }
+
+        AddReward(-0.01f);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

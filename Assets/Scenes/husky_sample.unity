@@ -765,7 +765,6 @@ GameObject:
   m_Component:
   - component: {fileID: 55393175}
   - component: {fileID: 55393179}
-  - component: {fileID: 55393178}
   - component: {fileID: 55393177}
   - component: {fileID: 55393176}
   m_Layer: 0
@@ -820,14 +819,6 @@ MonoBehaviour:
   _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
---- !u!81 &55393178
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55393174}
-  m_Enabled: 1
 --- !u!20 &55393179
 Camera:
   m_ObjectHideFlags: 0
@@ -6221,7 +6212,7 @@ MonoBehaviour:
   wheelFR: {fileID: 498836473}
   wheelRL: {fileID: 1636303326}
   wheelRR: {fileID: 1708479488}
-  mode: 0
+  mode: 1
   maxLinearSpeed: 2
   maxRotationalSpeed: 10
   wheelRadius: 0.033
@@ -6360,7 +6351,7 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 1
-  m_BehaviorType: 1
+  m_BehaviorType: 0
   m_BehaviorName: Task1(goal)
   TeamId: 0
   m_UseChildSensors: 1
@@ -9054,7 +9045,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7626261778264293183, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
 --- !u!64 &827512555
@@ -11648,7 +11639,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 303825609616886180, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
 --- !u!1 &950488898
@@ -12408,7 +12399,7 @@ GameObject:
   - component: {fileID: 1096471242}
   - component: {fileID: 1096471241}
   m_Layer: 0
-  m_Name: D435_Front_Right
+  m_Name: D435_Rear_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14414,7 +14405,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1148824745}
   - component: {fileID: 1148824749}
-  - component: {fileID: 1148824748}
   - component: {fileID: 1148824747}
   - component: {fileID: 1148824746}
   m_Layer: 0
@@ -14469,14 +14459,6 @@ MonoBehaviour:
   _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
---- !u!81 &1148824748
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1148824744}
-  m_Enabled: 1
 --- !u!20 &1148824749
 Camera:
   m_ObjectHideFlags: 0
@@ -14595,13 +14577,45 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2067077026989913257, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: -2014623778241709661, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_Name
       value: maze
       objectReference: {fileID: 0}
+    - target: {fileID: 1351844646615357348, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367225043878526138, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071157278152018705, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688111480887514414, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4087270197095684014, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053092741488696281, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7707749559887983363, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
@@ -15868,7 +15882,7 @@ GameObject:
   - component: {fileID: 1349975688}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16567,11 +16581,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1394132055}
   - component: {fileID: 1394132059}
-  - component: {fileID: 1394132058}
   - component: {fileID: 1394132057}
   - component: {fileID: 1394132056}
   m_Layer: 0
-  m_Name: Rear_Left_Camera
+  m_Name: Front_Right_Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16605,7 +16618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 60
-  _topicName: Rear_Left_Cam
+  _topicName: Front_Right_Cam
   _frame_id: camera
 --- !u!114 &1394132057
 MonoBehaviour:
@@ -16622,14 +16635,6 @@ MonoBehaviour:
   _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
---- !u!81 &1394132058
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394132054}
-  m_Enabled: 1
 --- !u!20 &1394132059
 Camera:
   m_ObjectHideFlags: 0
@@ -16728,11 +16733,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1408383907}
   - component: {fileID: 1408383911}
-  - component: {fileID: 1408383910}
   - component: {fileID: 1408383909}
   - component: {fileID: 1408383908}
   m_Layer: 0
-  m_Name: Front_Right_Camera
+  m_Name: Rear_Left_Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16766,7 +16770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 60
-  _topicName: Front_Right_Cam
+  _topicName: Rear_Left_Cam
   _frame_id: camera
 --- !u!114 &1408383909
 MonoBehaviour:
@@ -16783,14 +16787,6 @@ MonoBehaviour:
   _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
---- !u!81 &1408383910
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408383906}
-  m_Enabled: 1
 --- !u!20 &1408383911
 Camera:
   m_ObjectHideFlags: 0
@@ -22523,7 +22519,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1675309425}
   - component: {fileID: 1675309429}
-  - component: {fileID: 1675309428}
   - component: {fileID: 1675309427}
   - component: {fileID: 1675309426}
   m_Layer: 0
@@ -22578,14 +22573,6 @@ MonoBehaviour:
   _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
---- !u!81 &1675309428
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675309424}
-  m_Enabled: 1
 --- !u!20 &1675309429
 Camera:
   m_ObjectHideFlags: 0
@@ -22639,7 +22626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1682169143}
   - component: {fileID: 1682169147}
-  - component: {fileID: 1682169146}
   - component: {fileID: 1682169145}
   - component: {fileID: 1682169144}
   m_Layer: 0
@@ -22694,14 +22680,6 @@ MonoBehaviour:
   _frequency: 60
   _resolution: {x: 640, y: 480}
   _quality: 100
---- !u!81 &1682169146
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682169142}
-  m_Enabled: 1
 --- !u!20 &1682169147
 Camera:
   m_ObjectHideFlags: 0
@@ -23217,6 +23195,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4495838123158262699, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
   m_PrefabInstance: {fileID: 1173402901}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1774315643
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173402905}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!64 &1794754225
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -23508,7 +23502,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6895984396946057512, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
 --- !u!4 &1810472209 stripped
@@ -23516,6 +23510,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8480524874084567977, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
   m_PrefabInstance: {fileID: 1173402901}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &1810472212
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173402904}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1825508165
 GameObject:
   m_ObjectHideFlags: 0
@@ -25972,6 +25982,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   geometryType: 3
+--- !u!54 &1924296135
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173402903}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1928766269
 GameObject:
   m_ObjectHideFlags: 8
@@ -26074,7 +26100,7 @@ GameObject:
   - component: {fileID: 1987338655}
   - component: {fileID: 1987338654}
   m_Layer: 0
-  m_Name: D435_Rear_Left
+  m_Name: D435_Front_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26422,7 +26448,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2915799347095704723, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
 --- !u!4 &2032264381 stripped
@@ -26430,6 +26456,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4472183754489252989, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
   m_PrefabInstance: {fileID: 1173402901}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &2032264384
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173402902}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &2048306862
 GameObject:
   m_ObjectHideFlags: 0
