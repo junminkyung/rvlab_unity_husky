@@ -23,13 +23,13 @@ public class RollerHusky : Agent
     {
         aBody.angularVelocity = Vector3.zero;
         aBody.velocity = Vector3.zero;
-        aBody.TeleportRoot(new Vector3(-3.3f, 0.5f, 3.3f), Quaternion.Euler(0f, 180f, 0f));
-        // float noiseMagnitude = 1.0f; // 노이즈 크기 조절
-        // Vector3 randomNoise = new Vector3(Random.Range(-noiseMagnitude, noiseMagnitude), 0, Random.Range(-noiseMagnitude, noiseMagnitude));
-        // Vector3 randomPosition = new Vector3(-3.3f, 0.5f, 3.3f) + randomNoise;
-        // Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(0, 360), 0f);
+        // aBody.TeleportRoot(new Vector3(-3.3f, 0.5f, 3.3f), Quaternion.Euler(0f, 180f, 0f));
+        float noiseMagnitude = 1.0f; // 노이즈 크기 조절
+        Vector3 randomNoise = new Vector3(Random.Range(-noiseMagnitude, noiseMagnitude), 0, Random.Range(-noiseMagnitude, noiseMagnitude));
+        Vector3 randomPosition = new Vector3(-3.3f, 0.5f, 3.3f) + randomNoise;
+        Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(0, 360), 0f);
 
-        // aBody.TeleportRoot(randomPosition, randomRotation);
+        aBody.TeleportRoot(randomPosition, randomRotation);
 
 
         // Target을 Random.value함수를 활용해서 새로운 무작위 위치에 이동
