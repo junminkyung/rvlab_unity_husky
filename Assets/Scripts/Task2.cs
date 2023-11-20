@@ -7,7 +7,7 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using Unity.Robotics.UrdfImporter.Control;
 
-public class HuskyDrive : Agent
+public class Task2 : Agent
 {
     public ArticulationBody aBody;
     public GameObject wheelFL; // Front left wheel
