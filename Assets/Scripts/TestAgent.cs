@@ -9,10 +9,10 @@ using UnitySensors;
 public class TestAgent : Agent
 {
     public ArticulationBody aBody;
-    public float RotSpeed = 3;
-    public float LinearSpeed = 5;
+    public float RotSpeed = 2;
+    public float LinearSpeed = 4;
     public Transform Target;
-    public VelodyneSensor LiDAR;
+    //public VelodyneSensor LiDAR;
     // private float maxWallDistance = 3.0f;
 
     // public GameObject temp;
@@ -29,23 +29,23 @@ public class TestAgent : Agent
     {
         aBody.angularVelocity = Vector3.zero;
         aBody.velocity = Vector3.zero;
-        // aBody.TeleportRoot(new Vector3(-3.3f, 0.5f, 3.3f), Quaternion.Euler(0f, 180f, 0f));
+        aBody.TeleportRoot(new Vector3(-2.0f, 0.2f, 2.0f), Quaternion.Euler(0f, 180f, 0f));
 
-        // Agent를 노이즈를 활용해서 (-3.3, 0.5, 3.3)주위의 새로운 무작위 위치에 이동
+        /*// Agent를 노이즈를 활용해서 (-3.3, 0.5, 3.3)주위의 새로운 무작위 위치에 이동
         float noiseMagnitude = 1.0f; // 노이즈 크기 조절
         Vector3 randomNoise = new Vector3(Random.Range(-noiseMagnitude, noiseMagnitude), 0, Random.Range(-noiseMagnitude, noiseMagnitude));
         Vector3 randomPosition = new Vector3(-5.5f, 0.0f, 5.5f) + randomNoise;
         Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(0, 360), 0f);
         aBody.TeleportRoot(randomPosition, randomRotation);
-
+*/
 
         // Target을 Random함수를 활용해서 새로운 무작위 위치에 이동
-        Target.localPosition = new Vector3(Random.Range(-6.0f, 6.0f), 0.5f, Random.Range(-6.0f, 6.0f));
+        Target.localPosition = new Vector3(Random.Range(-3.0f, 3.0f), 0.5f, Random.Range(-3.0f, 3.0f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {   
-        // Velodyne LiDAR 센서에서 수집한 관측 정보를 추가
+        /*// Velodyne LiDAR 센서에서 수집한 관측 정보를 추가
         LiDAR.CompleteJob(); // 센서 작업이 완료될 때까지 기다립니다.
         for (int i = 0; i < LiDAR.pointsNum; i++)
         {
@@ -85,7 +85,7 @@ public class TestAgent : Agent
             // sensor.AddObservation(point);
             // sensor.AddObservation(intensity);
         }
-
+*/
         // Target/Agent의 위치 정보 수집
         sensor.AddObservation(Target.localPosition);
         sensor.AddObservation(aBody.transform.localPosition);
@@ -160,6 +160,7 @@ public class TestAgent : Agent
         if (coll.gameObject.CompareTag("Wall"))
         {   
             Debug.Log("Hit Wall");
+            SetReward(-1.0f);
             EndEpisode();
         }
     }

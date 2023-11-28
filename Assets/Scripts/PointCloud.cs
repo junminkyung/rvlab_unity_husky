@@ -50,12 +50,7 @@ public class PointCloud : Sensor {
         points = new Vector3[numPoints];
         indecies = new int[numPoints];
         colors = new Color[numPoints];
-        // if (lidarData.points != null) 
-        // {
-        //     points = lidarData.points.ToArray();
-        // } 
         points = lidarData.points.ToArray();
-        Debug.Log($"points: {points}");
         for (int i = 0; i < points.Length; ++i) {
             indecies[i] = i;
             colors[i] = Color.white;
