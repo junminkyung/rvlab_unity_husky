@@ -5385,6 +5385,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5416862128607984439, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
   m_PrefabInstance: {fileID: 437269882}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &437269884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5416862128607984436, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
+  m_PrefabInstance: {fileID: 437269882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &463907301
 GameObject:
   m_ObjectHideFlags: 8
@@ -12464,14 +12469,14 @@ GameObject:
   m_Component:
   - component: {fileID: 968169001}
   - component: {fileID: 968169010}
+  - component: {fileID: 968169013}
   - component: {fileID: 968169009}
-  - component: {fileID: 968169008}
   - component: {fileID: 968169007}
   - component: {fileID: 968169006}
-  - component: {fileID: 968169005}
-  - component: {fileID: 968169011}
+  - component: {fileID: 968169012}
   - component: {fileID: 968169003}
   - component: {fileID: 968169002}
+  - component: {fileID: 968169011}
   m_Layer: 0
   m_Name: husky
   m_TagString: robot
@@ -12522,20 +12527,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5365834, y: 0.036735415, z: 0.05855584}
   m_Center: {x: -0.00037264824, y: 0.089585304, z: -0.46347463}
---- !u!114 &968169005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968169000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DecisionPeriod: 10
-  TakeActionsBetweenDecisions: 1
 --- !u!114 &968169006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12618,30 +12609,6 @@ ArticulationBody:
   m_Immovable: 0
   m_UseGravity: 1
   m_CollisionDetectionMode: 0
---- !u!114 &968169008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968169000}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e855a7cdf55f74d99769491c03e1364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wheelFL: {fileID: 475408101}
-  wheelFR: {fileID: 69326694}
-  wheelRL: {fileID: 824979536}
-  wheelRR: {fileID: 489013265}
-  mode: 1
-  maxLinearSpeed: 2
-  maxRotationalSpeed: 10
-  wheelRadius: 0.033
-  trackWidth: 0.288
-  forceLimit: 50
-  damping: 10
-  ROSTimeout: 0.5
 --- !u!114 &968169009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12689,6 +12656,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 968169000}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DecisionPeriod: 10
+  TakeActionsBetweenDecisions: 1
+--- !u!114 &968169012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968169000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4f8806c6d6ba9243bf2c9a679d7bdb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -12696,11 +12677,35 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  aBody: {fileID: 968169007}
+  aBody: {fileID: 0}
   RotSpeed: 3
   LinearSpeed: 5
   Target: {fileID: 702591773}
   LiDAR: {fileID: 1255910677}
+--- !u!114 &968169013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968169000}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e855a7cdf55f74d99769491c03e1364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheelFL: {fileID: 0}
+  wheelFR: {fileID: 0}
+  wheelRL: {fileID: 0}
+  wheelRR: {fileID: 0}
+  mode: 1
+  maxLinearSpeed: 2
+  maxRotationalSpeed: 1
+  wheelRadius: 0.033
+  trackWidth: 0.288
+  forceLimit: 10
+  damping: 10
+  ROSTimeout: 0.5
 --- !u!1 &980726967
 GameObject:
   m_ObjectHideFlags: 0
@@ -17531,12 +17536,33 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5416862128607984441, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
   m_PrefabInstance: {fileID: 437269882}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 437269884}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 42c1d58c3c2fee7459d766d2a82ea877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1255910678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437269884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cde12085c739d548a159c84b40bbd2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _serializer:
+    _msg:
+      transforms: []
+  _topicName: /tf
+  thisFrameID: velodyne_link
+  rootTF: 1
+  parentSensor: {fileID: 1373562487}
+  parentFrameID: base_link
 --- !u!1 &1288130376
 GameObject:
   m_ObjectHideFlags: 0
