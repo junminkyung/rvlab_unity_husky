@@ -5376,7 +5376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5416862128607984441, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5416862128607984441, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
       propertyPath: _transform
@@ -5384,9 +5384,11 @@ PrefabInstance:
       objectReference: {fileID: 437269883}
     - target: {fileID: 6738270277677278928, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6738270277677278928, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
+    - {fileID: 5416862128607984441, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
 --- !u!4 &437269883 stripped
 Transform:
@@ -8715,7 +8717,7 @@ Transform:
   m_GameObject: {fileID: 702591769}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6, y: 1.8, z: -6.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 777130658}
@@ -12481,7 +12483,7 @@ GameObject:
   - component: {fileID: 968169009}
   - component: {fileID: 968169007}
   - component: {fileID: 968169006}
-  - component: {fileID: 968169012}
+  - component: {fileID: 968169014}
   - component: {fileID: 968169003}
   - component: {fileID: 968169002}
   - component: {fileID: 968169011}
@@ -12548,7 +12550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 288008
+    VectorObservationSize: 188
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -12669,27 +12671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DecisionPeriod: 10
   TakeActionsBetweenDecisions: 1
---- !u!114 &968169012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 968169000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f8806c6d6ba9243bf2c9a679d7bdb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentParameters:
-    maxStep: 0
-  hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
-  aBody: {fileID: 0}
-  RotSpeed: 3
-  LinearSpeed: 5
-  Target: {fileID: 702591773}
-  LiDAR: {fileID: 1255910677}
 --- !u!114 &968169013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12714,6 +12695,27 @@ MonoBehaviour:
   forceLimit: 10
   damping: 10
   ROSTimeout: 0.5
+--- !u!114 &968169014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968169000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd3afde4313a710f927cd02fba7306d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  aBody: {fileID: 968169007}
+  RotSpeed: 3
+  LinearSpeed: 5
+  Target: {fileID: 702591773}
+  LiDAR_2D: {fileID: 1255910684}
 --- !u!1 &980726967
 GameObject:
   m_ObjectHideFlags: 0
@@ -14571,7 +14573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3368833890663671587, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.602
+      value: 0.489
       objectReference: {fileID: 0}
     - target: {fileID: -3368833890663671587, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14647,11 +14649,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7407426251609932930, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.602
+      value: 0.509
       objectReference: {fileID: 0}
     - target: {fileID: 7407426251609932930, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7407426251609932930, guid: 020a98f6c8882198e8a8cf79a6a45b7e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17539,17 +17541,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f78b803fdeb364ce9ad7ae978cb2f971, type: 3}
   m_PrefabInstance: {fileID: 1252667664}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1255910677 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5416862128607984441, guid: d7ba18bcf853116459c3becb08f01c65, type: 3}
-  m_PrefabInstance: {fileID: 437269882}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437269884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42c1d58c3c2fee7459d766d2a82ea877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1255910678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17567,29 +17558,11 @@ MonoBehaviour:
     _msg:
       transforms: []
   _topicName: /tf
-  thisFrameID: velodyne_link
+  thisFrameID: laser_link
   rootTF: 1
   parentSensor: {fileID: 1373562487}
   parentFrameID: base_link
---- !u!114 &1255910680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437269884}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44924b9ca4086d349ad894fec8f65fd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _visualizeMode: 2
-  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  _point:
-    color: {r: 1, g: 1, b: 1, a: 1}
-    radius: 0.5
-  _maxPointNum: 1000
---- !u!114 &1255910681
+--- !u!114 &1255910684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17598,62 +17571,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 437269884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c7ae3576ad25ee40bc9b7d8428a9926, type: 3}
+  m_Script: {fileID: 11500000, guid: 91325ed1efd0ff358a6ed57358bee8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 10
-  _material: {fileID: 2100000, guid: 169ab83ca821d8ebba6241c82e693a41, type: 2}
-  _sensor: {fileID: 1255910677}
---- !u!23 &1255910682
-MeshRenderer:
+  laserLink: {fileID: 437269884}
+  debugVisualization: 0
+  updateRate: 10
+  samples: 180
+  angleMin: -3.1416
+  angleMax: 3.1416
+  rangeMin: 0.1
+  rangeMax: 10
+  directions: []
+  ranges: []
+--- !u!114 &1255910685
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437269884}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1255910683
-MeshFilter:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59dd0780505e0c3fa1c200d3fbb068f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ClockMode: 0
+  m_LastSetClockMode: 0
+  m_PublishRateHz: 100
+--- !u!114 &1255910686
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437269884}
-  m_Mesh: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f198ba77c86f271690f3073d96be0a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserTopicName: base_scan
+  laserLinkId: laser_link
+  laser: {fileID: 1255910684}
+  publishRate: 10
 --- !u!1 &1288130376
 GameObject:
   m_ObjectHideFlags: 0
