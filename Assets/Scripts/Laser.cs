@@ -21,7 +21,7 @@ public class Laser : MonoBehaviour
     public float angleMax = Mathf.PI;
     private float angleIncrement;
     public float rangeMin = 0.1f;
-    public float rangeMax = 10.0f;
+    public float rangeMax = 20.0f;
     // containers
     private RaycastHit[] raycastHits;
     private Quaternion[] rayRotations;

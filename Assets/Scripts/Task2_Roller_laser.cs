@@ -44,6 +44,7 @@ public class Task2_Roller_laser : Agent
         foreach (float range in laserScanRanges)
         {
             sensor.AddObservation(range);
+            // Debug.Log(range);
         }
     }
 
