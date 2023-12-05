@@ -26,8 +26,15 @@ public class Task2_Roller_laser : Agent
         aBody.velocity = Vector3.zero;
         aBody.TeleportRoot(new Vector3(-5.5f, 0.0f, 6.0f), Quaternion.Euler(0f, 90f, 0f));
 
+        // float noiseMagnitude = 1.0f; // 노이즈 크기 조절
+        // Vector3 randomNoise = new Vector3(Random.Range(-noiseMagnitude, noiseMagnitude), 0, Random.Range(-noiseMagnitude, noiseMagnitude));
+        // Vector3 randomPosition = new Vector3(-5.5f, 0.0f, 6.0f) + randomNoise;
+        // Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(60, 120), 0f);
+        // aBody.TeleportRoot(randomPosition, randomRotation);
+
         // Target을 Random함수를 활용해서 새로운 무작위 위치에 이동
         Target.localPosition = new Vector3(6.0f, 1.8f, -6.5f);
+        // Target.localPosition = new Vector3(Random.Range(-1.0f, 7.0f), 1.8f, Random.Range(-4.5f, -7.0f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -40,12 +47,12 @@ public class Task2_Roller_laser : Agent
         sensor.AddObservation(aBody.velocity.x);
         sensor.AddObservation(aBody.velocity.z);
 
-        float[] laserScanRanges = LiDAR_2D.GetCurrentScanRanges();
-        foreach (float range in laserScanRanges)
-        {
-            sensor.AddObservation(range);
-            // Debug.Log(range);
-        }
+        // float[] laserScanRanges = LiDAR_2D.GetCurrentScanRanges();
+        // foreach (float range in laserScanRanges)
+        // {
+        //     sensor.AddObservation(range);
+        //     // Debug.Log(range);
+        // }
     }
 
     private void Drive(float Input_Linear_Vel, float Input_Angular_Vel)
