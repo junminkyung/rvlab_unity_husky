@@ -14,6 +14,9 @@ public class Task2_Roller_laser : Agent
     public Transform Target;
     public Laser LiDAR_2D;
     
+    public float episodeTimeoutSeconds = 60.0f; // 에피소드의 최대 시간 (예: 60초)
+    private float episodeStartTime; // 에피소드 시작 시간
+    
     void Start()
     {
     	aBody = GetComponent<ArticulationBody>(); 
@@ -26,6 +29,7 @@ public class Task2_Roller_laser : Agent
         aBody.velocity = Vector3.zero;
         aBody.TeleportRoot(new Vector3(-5.5f, 0.0f, 6.0f), Quaternion.Euler(0f, 90f, 0f));
 
+        episodeStartTime = Time.time; 
         // float noiseMagnitude = 1.0f; // 노이즈 크기 조절
         // Vector3 randomNoise = new Vector3(Random.Range(-noiseMagnitude, noiseMagnitude), 0, Random.Range(-noiseMagnitude, noiseMagnitude));
         // Vector3 randomPosition = new Vector3(-5.5f, 0.0f, 6.0f) + randomNoise;
@@ -47,12 +51,12 @@ public class Task2_Roller_laser : Agent
         sensor.AddObservation(aBody.velocity.x);
         sensor.AddObservation(aBody.velocity.z);
 
-        // float[] laserScanRanges = LiDAR_2D.GetCurrentScanRanges();
-        // foreach (float range in laserScanRanges)
-        // {
-        //     sensor.AddObservation(range);
-        //     // Debug.Log(range);
-        // }
+        float[] laserScanRanges = LiDAR_2D.GetCurrentScanRanges();
+        foreach (float range in laserScanRanges)
+        {
+            sensor.AddObservation(range);
+            // Debug.Log(range);
+        }
     }
 
     private void Drive(float Input_Linear_Vel, float Input_Angular_Vel)
@@ -65,33 +69,124 @@ public class Task2_Roller_laser : Agent
     {
         base.OnActionReceived(actionBuffers);
         var actions = actionBuffers.ContinuousActions;
-        float LinearVel = Mathf.Clamp(actions[0], -1.0f, 1.0f);
+        float LinearVel = Mathf.Clamp(actions[0], 0.0f, 1.0f);
         float AngularVel = Mathf.Clamp(actions[1], -1.0f, 1.0f);
 
         Drive(LinearVel, AngularVel);
 
         // Agent와 Target사이의 거리를 측정
         float distanceToTarget = Vector3.Distance(aBody.transform.localPosition, Target.localPosition);
-   
-        // Target에 도달하는 경우 (거리가 1.42보다 작은 경우) Episode 종료
-        if (distanceToTarget < 1.42f)
-        {   
-            SetReward(1.0f);
+        // Debug.Log($"Distance to Target: {distanceToTarget}");
+        
+        // Target에 도달하는 경우 Episode 종료(거리에 따른 보상)
+        // if (distanceToTarget > 14.0f && distanceToTarget <= 17.0f)
+        // {
+        //     // Debug.Log("stage 1"); // 직선주행
+        //     AddReward(0.5f);
+        // }
+        // else if (distanceToTarget > 8.0f && distanceToTarget <= 14.0f)
+        // {   
+        //     // Debug.Log("stage 2"); // 코너주행
+        //     AddReward(1.0f);
+        // }
+        // else if (distanceToTarget > 1.42f && distanceToTarget <= 8.0f)
+        // {   
+        //     // Debug.Log("stage 3"); // 코너 꺾고 목적지가 있는 곳으로 직선주행
+        //     AddReward(1.5f);
+        // }
+        // else if (distanceToTarget <= 1.42f)
+        // {   
+        //     // Debug.Log("Finish");
+        //     SetReward(10.0f);
+        //     EndEpisode();
+        // }
+        
+        // if (distanceToTarget > 13.0f && distanceToTarget <= 17.0f)
+        // {
+        //     // Debug.Log("stage 1"); 
+        //     SetReward(0.5f);
+        // }
+        // else if (distanceToTarget > 9.0f && distanceToTarget <= 13.0f)
+        // {   
+        //     // Debug.Log("stage 2);
+        //     SetReward(1.0f);
+        // }
+        // else if (distanceToTarget > 5.0f && distanceToTarget <= 9.0f)
+        // {   
+        //     // Debug.Log("stage 3"); 
+        //     SetReward(1.5f);
+        // }
+        // else if (distanceToTarget > 1.5f && distanceToTarget <= 5.0f)
+        // {   
+        //     // Debug.Log("stage 3"); 
+        //     SetReward(2.0f);
+        // }
+        // else if (distanceToTarget <= 1.5f)
+        // {   
+        //     // Debug.Log("Finish");
+        //     SetReward(2.5f);
+        //     EndEpisode();
+        // }
+        
+        
+        // if (distanceToTarget < 1.42f)
+        // {   
+        //     SetReward(1.0f);
+        //     EndEpisode();
+        // }
+        
+        
+        // if (distanceToTarget > 14.5f && distanceToTarget <= 17.0f)
+        // {
+        //     // Debug.Log("stage 1"); 
+        //     AddReward(0.001f);
+        // }
+        // else if (distanceToTarget > 13.3f && distanceToTarget <= 14.5f)
+        // {   
+        //     // Debug.Log("stage 2"); 
+        //     AddReward(0.002f);
+        // }
+        // else if (distanceToTarget > 10.8f && distanceToTarget <= 13.3f)
+        // {   
+        //     // Debug.Log("stage 3"); 
+        //     AddReward(0.003f);
+        // }
+        // else if (distanceToTarget > 5.5f && distanceToTarget <= 10.8f)
+        // {   
+        //     // Debug.Log("stage 4"); 
+        //     AddReward(0.004f);
+        // }
+        // else if (distanceToTarget > 1.42f && distanceToTarget <= 5.5f)
+        // {   
+        //     // Debug.Log("stage 5"); 
+        //     AddReward(0.005f);
+        // }
+        // else if (distanceToTarget <= 1.42f)
+        // {   
+        //     // Debug.Log("Finish");
+        //     SetReward(10.0f);
+        //     EndEpisode();
+        // }
+        //
+        if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
+        {
             EndEpisode();
         }
+
+        // AddReward(-0.01f);
     }
 
     void OnCollisionEnter(Collision coll)
     {
         if (coll.gameObject.CompareTag("Wall"))
         {   
-            Debug.Log("Hit Wall");
+            // Debug.Log("Hit Wall");
             EndEpisode();
         }
 
         if (coll.gameObject.CompareTag("Partition"))
         {   
-            Debug.Log("Hit Partition");
+            // Debug.Log("Hit Partition");
             EndEpisode();
         }
     }

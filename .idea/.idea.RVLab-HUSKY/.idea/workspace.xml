@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e47b10c6-9324-47fb-a6d4-b28c5db7716f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RVLab-HUSKY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RVLab-HUSKY/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DiscreteHusky.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DiscreteHusky.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Roller_husky_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Roller_husky_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(maze_2corners)_2dlidar_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(maze_2corners)_2dlidar_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Task2(maze_2corners)_2dlidar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Task2(maze_2corners)_2dlidar.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(Obstacle_simple)_2dlidar_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(Obstacle_simple)_2dlidar_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(maze_simple)_2dlidar_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(maze_simple)_2dlidar_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/cam_lidar_test_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/cam_lidar_test_timers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Task2(Obstacle_simple)_2dlidar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Task2(Obstacle_simple)_2dlidar.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Task2(maze_simple)_2dlidar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Task2(maze_simple)_2dlidar.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/cam_lidar_test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/cam_lidar_test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Task2_Roller_laser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Task2_Roller_laser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/husky_original.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/husky_original.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +29,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors-ros@fe2e6f2e2b/Runtime/Scripts/Publishers/LiDAR/Velodyne/VelodynePublisher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors-ros@fe2e6f2e2b/Runtime/Scripts/Publishers/TF/TFPublisher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Sensors/LiDAR/Velodyne/VelodyneSensor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Visualizers/LiDAR/PointsMesh/PointsMeshGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Visualizers/LiDAR/Velodyne/VelodynePointsMeshGenerator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.ros-tcp-connector@c27f00c6cf/Runtime/ROSGeometry/CoordinateSpaces.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/PointCloud.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2Z6fwSGtdkcI1ophPu9FxgzNRFg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -32,6 +51,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -40,13 +60,14 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "/home/jmk/.config/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
-      "/home/jmk/.config/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/home/jmk/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/home/jmk/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache",
       "/home/jmk/.local/share/Symbols/src"
     ]
   }
@@ -78,10 +99,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21115">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="21115" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -98,6 +119,9 @@
       <option name="presentableId" value="Default" />
       <updated>1701747696257</updated>
       <workItem from="1701747709549" duration="1392000" />
+      <workItem from="1702429434556" duration="13114000" />
+      <workItem from="1702879749277" duration="6117000" />
+      <workItem from="1703555458498" duration="22789000" />
     </task>
     <servers />
   </component>
@@ -105,6 +129,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

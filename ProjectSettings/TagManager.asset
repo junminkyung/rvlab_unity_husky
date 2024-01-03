@@ -8,6 +8,7 @@ TagManager:
   - Target
   - Wall
   - Partition
+  - Obstacle
   layers:
   - Default
   - TransparentFX

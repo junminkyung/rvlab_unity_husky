@@ -6,47 +6,59 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using UnitySensors;
 
-
-public class husky_original : Agent
+public class Task2_laser_addobstacles : Agent
 {
+    public ArticulationBody aBody;
     public float RotSpeed = 3;
     public float LinearSpeed = 5;
-    public ArticulationBody aBody;
     public Transform Target;
-    public VelodyneSensor LiDAR;
-
+    public Laser LiDAR_2D;
+    
     void Start()
     {
     	aBody = GetComponent<ArticulationBody>(); 
+
     }
 
     public override void OnEpisodeBegin()
     {
         aBody.angularVelocity = Vector3.zero;
         aBody.velocity = Vector3.zero;
-        aBody.TeleportRoot(new Vector3(0.0f, 0.0f, 0.0f), Quaternion.Euler(0f, 90f, 0f));
+        // aBody.TeleportRoot(new Vector3(-5.5f, 0.0f, 6.0f), Quaternion.Euler(0f, 90f, 0f));
+
+        float noiseMagnitude = 1.0f; // 노이즈 크기 조절
+        Vector3 randomNoise = new Vector3(Random.Range(-noiseMagnitude, noiseMagnitude), 0, Random.Range(-noiseMagnitude, noiseMagnitude));
+        Vector3 randomPosition = new Vector3(-5.5f, 0.0f, 6.0f) + randomNoise;
+        Quaternion randomRotation = Quaternion.Euler(0f, Random.Range(60, 120), 0f);
+        aBody.TeleportRoot(randomPosition, randomRotation);
 
         // Target을 Random함수를 활용해서 새로운 무작위 위치에 이동
-        Target.localPosition = new Vector3(0.3f, 1.0f, 2.7f);
+        Target.localPosition = new Vector3(6.0f, 1.8f, -6.5f);
+        // Target.localPosition = new Vector3(Random.Range(-1.0f, 7.0f), 1.8f, Random.Range(-4.5f, -7.0f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
-    {
-        // Target and Agent positions
+    {   
+        // Target/Agent의 위치 정보 수집
         sensor.AddObservation(Target.localPosition);
         sensor.AddObservation(aBody.transform.localPosition);
 
-        // Agent velocity
+        // Agent의 velocity 정보 수집
         sensor.AddObservation(aBody.velocity.x);
         sensor.AddObservation(aBody.velocity.z);
+
+        float[] laserScanRanges = LiDAR_2D.GetCurrentScanRanges();
+        foreach (float range in laserScanRanges)
+        {
+            sensor.AddObservation(range);
+            // Debug.Log(range);
+        }
     }
 
     private void Drive(float Input_Linear_Vel, float Input_Angular_Vel)
     {
         aBody.velocity = aBody.transform.forward * Input_Linear_Vel * LinearSpeed;
         aBody.angularVelocity = aBody.transform.up * Input_Angular_Vel * RotSpeed;
-        // Debug.Log($"aBody.transform.localPosition: {aBody.transform.position}");
-        // Debug.Log($"LiDAR.transform: {LiDAR._transform.position}");
     }
     
     public override void OnActionReceived(ActionBuffers actionBuffers)
@@ -69,6 +81,27 @@ public class husky_original : Agent
         }
     }
 
+    void OnCollisionEnter(Collision coll)
+    {
+        if (coll.gameObject.CompareTag("Wall"))
+        {   
+            // Debug.Log("Hit Wall");
+            EndEpisode();
+        }
+
+        if (coll.gameObject.CompareTag("Partition"))
+        {   
+            // Debug.Log("Hit Partition");
+            EndEpisode();
+        }
+        
+        if (coll.gameObject.CompareTag("Obstacle"))
+        {   
+            // Debug.Log("Hit Obstacle");
+            EndEpisode();
+        }
+    }
+    
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         var continuousActionsOut = actionsOut.ContinuousActions;
