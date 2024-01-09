@@ -136,38 +136,38 @@ public class Task2_Roller_laser : Agent
         // }
         
         
-        // if (distanceToTarget > 14.5f && distanceToTarget <= 17.0f)
-        // {
-        //     // Debug.Log("stage 1"); 
-        //     AddReward(0.001f);
-        // }
-        // else if (distanceToTarget > 13.3f && distanceToTarget <= 14.5f)
-        // {   
-        //     // Debug.Log("stage 2"); 
-        //     AddReward(0.002f);
-        // }
-        // else if (distanceToTarget > 10.8f && distanceToTarget <= 13.3f)
-        // {   
-        //     // Debug.Log("stage 3"); 
-        //     AddReward(0.003f);
-        // }
-        // else if (distanceToTarget > 5.5f && distanceToTarget <= 10.8f)
-        // {   
-        //     // Debug.Log("stage 4"); 
-        //     AddReward(0.004f);
-        // }
-        // else if (distanceToTarget > 1.42f && distanceToTarget <= 5.5f)
-        // {   
-        //     // Debug.Log("stage 5"); 
-        //     AddReward(0.005f);
-        // }
-        // else if (distanceToTarget <= 1.42f)
-        // {   
-        //     // Debug.Log("Finish");
-        //     SetReward(10.0f);
-        //     EndEpisode();
-        // }
-        //
+        if (distanceToTarget > 14.5f && distanceToTarget <= 17.0f)
+        {
+            // Debug.Log("stage 1"); 
+            AddReward(0.001f);
+        }
+        else if (distanceToTarget > 13.3f && distanceToTarget <= 14.5f)
+        {   
+            // Debug.Log("stage 2"); 
+            AddReward(0.002f);
+        }
+        else if (distanceToTarget > 10.8f && distanceToTarget <= 13.3f)
+        {   
+            // Debug.Log("stage 3"); 
+            AddReward(0.003f);
+        }
+        else if (distanceToTarget > 5.5f && distanceToTarget <= 10.8f)
+        {   
+            // Debug.Log("stage 4"); 
+            AddReward(0.004f);
+        }
+        else if (distanceToTarget > 1.42f && distanceToTarget <= 5.5f)
+        {   
+            // Debug.Log("stage 5"); 
+            AddReward(0.005f);
+        }
+        else if (distanceToTarget <= 1.42f)
+        {   
+            // Debug.Log("Finish");
+            SetReward(10.0f);
+            EndEpisode();
+        }
+        
         if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
         {
             EndEpisode();

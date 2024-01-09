@@ -5,8 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Task2(maze_simple)_2dlidar.unity
     guid: 541647e1ce8aeadfa9c39e951fc7b833
+  - enabled: 1
+    path: Assets/Scenes/Task2(maze).unity
+    guid: c97adee4512fcf919a0a6a78a915926e
   m_configObjects:
     com.unity.ml-agents.settings: {fileID: 11400000, guid: 85b8dd8000e05ce83bfc3dd1ecb61513, type: 2}
