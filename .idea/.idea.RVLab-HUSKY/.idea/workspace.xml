@@ -4,53 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e47b10c6-9324-47fb-a6d4-b28c5db7716f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(maze)_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/Task2(maze)_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/maze.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/maze.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/accessories/300_mm_sensor_arch.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/accessories/300_mm_sensor_arch.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/accessories/510_mm_sensor_arch.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/accessories/510_mm_sensor_arch.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/accessories/lms1xx_mount.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/accessories/lms1xx_mount.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/base_link.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/base_link.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/bumper.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/bumper.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/bumper_extension.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/bumper_extension.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/large_top_plate.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/large_top_plate.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/top_chassis.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/top_chassis.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/top_plate.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/top_plate.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/user_rail.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/user_rail.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/wheel.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/neo_description/meshes/wheel.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ROSConnectionPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ROSConnectionPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Task2(maze).unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Task2(maze).unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/accessories/lms1xx_mount.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/accessories/lms1xx_mount.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/base_link.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/base_link.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/bumper.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/bumper.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/d435.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/d435.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/top_chassis.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/top_chassis.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/top_plate.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/top_plate.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/user_rail.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/user_rail.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/wheel.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_description/meshes/wheel.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/accessories/300_mm_sensor_arch.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/accessories/300_mm_sensor_arch.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/accessories/510_mm_sensor_arch.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/accessories/510_mm_sensor_arch.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/accessories/lms1xx_mount.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/accessories/lms1xx_mount.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/base_link.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/base_link.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/bumper.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/bumper.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/bumper_extension.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/bumper_extension.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/large_top_plate.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/large_top_plate.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/top_chassis.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/top_chassis.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/top_plate.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/top_plate.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/user_rail.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/user_rail.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/wheel.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/husky_ui/meshes/wheel.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URDF/default/lms1xx/meshes/sick-lms1xx.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URDF/default/lms1xx/meshes/sick-lms1xx.dae.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/boot.config" beforeDir="false" />
-    </list>
+    <list default="true" id="e47b10c6-9324-47fb-a6d4-b28c5db7716f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors-ros@fe2e6f2e2b/Runtime/Scripts/Publishers/LiDAR/Velodyne/VelodynePublisher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors-ros@fe2e6f2e2b/Runtime/Scripts/Publishers/TF/TFPublisher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Sensors/LiDAR/Velodyne/VelodyneSensor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Utils/ScanPattern/RotatingLiDARScanPattern/RotatingLiDARScanPattern.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Visualizers/LiDAR/PointsMesh/PointsMeshGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Visualizers/LiDAR/Velodyne/VelodynePointsMeshGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.ros-tcp-connector@c27f00c6cf/Runtime/ROSGeometry/CoordinateSpaces.cs" root0="SKIP_HIGHLIGHTING" />
@@ -79,29 +34,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop-JMK&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "develop-JMK",
+    "last_opened_file_path": "/home/jmk/Unity_Projects/RollerBall",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/home/jmk/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/home/jmk/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/home/jmk/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/home/jmk/.config/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/home/jmk/.config/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/home/jmk/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2022.3.16f1/Editor/Unity" />
@@ -153,6 +109,7 @@
       <workItem from="1702879749277" duration="6117000" />
       <workItem from="1703555458498" duration="22789000" />
       <workItem from="1704352528304" duration="5297000" />
+      <workItem from="1704676027064" duration="17100000" />
     </task>
     <servers />
   </component>

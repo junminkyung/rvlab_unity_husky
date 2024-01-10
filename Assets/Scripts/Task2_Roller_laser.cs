@@ -27,7 +27,7 @@ public class Task2_Roller_laser : Agent
     {
         aBody.angularVelocity = Vector3.zero;
         aBody.velocity = Vector3.zero;
-        aBody.TeleportRoot(new Vector3(-5.5f, 0.0f, 6.0f), Quaternion.Euler(0f, 90f, 0f));
+        aBody.TeleportRoot(new Vector3(-5.5f, 1.5f, 6.0f), Quaternion.Euler(0f, 90f, 0f));
 
         episodeStartTime = Time.time; 
         // float noiseMagnitude = 1.0f; // 노이즈 크기 조절
@@ -69,7 +69,7 @@ public class Task2_Roller_laser : Agent
     {
         base.OnActionReceived(actionBuffers);
         var actions = actionBuffers.ContinuousActions;
-        float LinearVel = Mathf.Clamp(actions[0], 0.0f, 1.0f);
+        float LinearVel = Mathf.Clamp(actions[0], -1.0f, 1.0f);
         float AngularVel = Mathf.Clamp(actions[1], -1.0f, 1.0f);
 
         Drive(LinearVel, AngularVel);
@@ -129,44 +129,44 @@ public class Task2_Roller_laser : Agent
         // }
         
         
-        // if (distanceToTarget < 1.42f)
-        // {   
-        //     SetReward(1.0f);
-        //     EndEpisode();
-        // }
-        
-        
-        if (distanceToTarget > 14.5f && distanceToTarget <= 17.0f)
-        {
-            // Debug.Log("stage 1"); 
-            AddReward(0.001f);
-        }
-        else if (distanceToTarget > 13.3f && distanceToTarget <= 14.5f)
+        if (distanceToTarget < 1.42f)
         {   
-            // Debug.Log("stage 2"); 
-            AddReward(0.002f);
-        }
-        else if (distanceToTarget > 10.8f && distanceToTarget <= 13.3f)
-        {   
-            // Debug.Log("stage 3"); 
-            AddReward(0.003f);
-        }
-        else if (distanceToTarget > 5.5f && distanceToTarget <= 10.8f)
-        {   
-            // Debug.Log("stage 4"); 
-            AddReward(0.004f);
-        }
-        else if (distanceToTarget > 1.42f && distanceToTarget <= 5.5f)
-        {   
-            // Debug.Log("stage 5"); 
-            AddReward(0.005f);
-        }
-        else if (distanceToTarget <= 1.42f)
-        {   
-            // Debug.Log("Finish");
-            SetReward(10.0f);
+            SetReward(1.0f);
             EndEpisode();
         }
+        
+        
+        // if (distanceToTarget > 14.5f && distanceToTarget <= 17.0f)
+        // {
+        //     // Debug.Log("stage 1"); 
+        //     AddReward(0.001f);
+        // }
+        // else if (distanceToTarget > 13.3f && distanceToTarget <= 14.5f)
+        // {   
+        //     // Debug.Log("stage 2"); 
+        //     AddReward(0.002f);
+        // }
+        // else if (distanceToTarget > 10.8f && distanceToTarget <= 13.3f)
+        // {   
+        //     // Debug.Log("stage 3"); 
+        //     AddReward(0.003f);
+        // }
+        // else if (distanceToTarget > 5.5f && distanceToTarget <= 10.8f)
+        // {   
+        //     // Debug.Log("stage 4"); 
+        //     AddReward(0.004f);
+        // }
+        // else if (distanceToTarget > 1.42f && distanceToTarget <= 5.5f)
+        // {   
+        //     // Debug.Log("stage 5"); 
+        //     AddReward(0.005f);
+        // }
+        // else if (distanceToTarget <= 1.42f)
+        // {   
+        //     // Debug.Log("Finish");
+        //     SetReward(10.0f);
+        //     EndEpisode();
+        // }
         
         if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
         {

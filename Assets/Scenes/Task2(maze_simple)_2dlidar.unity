@@ -14656,7 +14656,7 @@ Transform:
   m_GameObject: {fileID: 777130657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2872368, y: -1.5965996, z: -0.49600738}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18608,7 +18608,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: bce88f29d48e1a56caf8a2032a44238b, type: 3}
   m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: RollerBall
