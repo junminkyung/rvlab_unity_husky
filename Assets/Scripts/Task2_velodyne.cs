@@ -44,6 +44,7 @@ public class Task2_velodyne : Agent
         // Target/Agent의 위치 정보 수집
         sensor.AddObservation(Target.localPosition);
         sensor.AddObservation(aBody.transform.localPosition);
+        sensor.AddObservation(aBody.transform.localEulerAngles);
         // sensor.AddObservation(aBody.transform.position - Target.position);
 
         // Agent의 velocity 정보 수집
@@ -61,11 +62,11 @@ public class Task2_velodyne : Agent
         //     // sensor.AddObservation(distance);
         // }
         //
-        float[] laserScanRanges = LiDAR.GetDistances();
-        foreach (float range in laserScanRanges)
-        {
-            sensor.AddObservation(range);
-        }
+        // float[] laserScanRanges = LiDAR.GetDistances();
+        // foreach (float range in laserScanRanges)
+        // {
+        //     sensor.AddObservation(range);
+        // }
         // Vector3[] lidarPoints = LiDAR.GetPoints();
         // foreach (Vector3 point in lidarPoints)
         // {
@@ -93,7 +94,7 @@ public class Task2_velodyne : Agent
     {
         base.OnActionReceived(actionBuffers);
         var actions = actionBuffers.ContinuousActions;
-        float LinearVel = Mathf.Clamp(actions[0], 0.0f, 1.0f);
+        float LinearVel = Mathf.Clamp(actions[0], -1.0f, 1.0f);
         float AngularVel = Mathf.Clamp(actions[1], -1.0f, 1.0f);
 
         Drive(LinearVel, AngularVel);
@@ -112,23 +113,24 @@ public class Task2_velodyne : Agent
 
         if (distance <= 1.42f)
         {
-            SetReward(100.0f);
+            SetReward(1.0f);
             EndEpisode();
         }
-        else
-        {
-            float reward = preDist - distance;
-            // Debug.Log($"reward: {preDist}, {distance
-            // }, {reward}");
-            SetReward(reward);
-            preDist = distance;
-        }
+        // else
+        // {
+        //     float reward = preDist - distance;
+        //     // Debug.Log($"reward: {preDist}, {distance
+        //     // }, {reward}");
+        //     SetReward(reward);
+        //     preDist = distance;
+        // }
         
         if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
         {
             EndEpisode();
         }
-
+        
+        // AddReward(-0.01f);
     }
 
     void OnCollisionEnter(Collision coll)
@@ -136,12 +138,14 @@ public class Task2_velodyne : Agent
         if (coll.gameObject.CompareTag("Wall"))
         {   
             // Debug.Log("Hit Wall");
+            SetReward(-1.0f);
             EndEpisode();
         }
 
         if (coll.gameObject.CompareTag("Partition"))
         {   
             // Debug.Log("Hit Partition");
+            SetReward(-1.0f);
             EndEpisode();
         }
     }

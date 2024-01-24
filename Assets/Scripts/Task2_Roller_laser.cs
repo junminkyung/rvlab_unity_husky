@@ -78,62 +78,11 @@ public class Task2_Roller_laser : Agent
         float distanceToTarget = Vector3.Distance(aBody.transform.localPosition, Target.localPosition);
         // Debug.Log($"Distance to Target: {distanceToTarget}");
         
-        // Target에 도달하는 경우 Episode 종료(거리에 따른 보상)
-        // if (distanceToTarget > 14.0f && distanceToTarget <= 17.0f)
-        // {
-        //     // Debug.Log("stage 1"); // 직선주행
-        //     AddReward(0.5f);
-        // }
-        // else if (distanceToTarget > 8.0f && distanceToTarget <= 14.0f)
+        // if (distanceToTarget < 1.42f)
         // {   
-        //     // Debug.Log("stage 2"); // 코너주행
-        //     AddReward(1.0f);
-        // }
-        // else if (distanceToTarget > 1.42f && distanceToTarget <= 8.0f)
-        // {   
-        //     // Debug.Log("stage 3"); // 코너 꺾고 목적지가 있는 곳으로 직선주행
-        //     AddReward(1.5f);
-        // }
-        // else if (distanceToTarget <= 1.42f)
-        // {   
-        //     // Debug.Log("Finish");
-        //     SetReward(10.0f);
-        //     EndEpisode();
-        // }
-        
-        // if (distanceToTarget > 13.0f && distanceToTarget <= 17.0f)
-        // {
-        //     // Debug.Log("stage 1"); 
-        //     SetReward(0.5f);
-        // }
-        // else if (distanceToTarget > 9.0f && distanceToTarget <= 13.0f)
-        // {   
-        //     // Debug.Log("stage 2);
         //     SetReward(1.0f);
-        // }
-        // else if (distanceToTarget > 5.0f && distanceToTarget <= 9.0f)
-        // {   
-        //     // Debug.Log("stage 3"); 
-        //     SetReward(1.5f);
-        // }
-        // else if (distanceToTarget > 1.5f && distanceToTarget <= 5.0f)
-        // {   
-        //     // Debug.Log("stage 3"); 
-        //     SetReward(2.0f);
-        // }
-        // else if (distanceToTarget <= 1.5f)
-        // {   
-        //     // Debug.Log("Finish");
-        //     SetReward(2.5f);
         //     EndEpisode();
         // }
-        
-        
-        if (distanceToTarget < 1.42f)
-        {   
-            SetReward(1.0f);
-            EndEpisode();
-        }
         
         
         // if (distanceToTarget > 14.5f && distanceToTarget <= 17.0f)
@@ -173,7 +122,7 @@ public class Task2_Roller_laser : Agent
             EndEpisode();
         }
 
-        // AddReward(-0.01f);
+        // AddReward(-0.001f);
     }
 
     void OnCollisionEnter(Collision coll)
@@ -181,12 +130,14 @@ public class Task2_Roller_laser : Agent
         if (coll.gameObject.CompareTag("Wall"))
         {   
             // Debug.Log("Hit Wall");
+            SetReward(-1f);
             EndEpisode();
         }
 
         if (coll.gameObject.CompareTag("Partition"))
         {   
             // Debug.Log("Hit Partition");
+            SetReward(-1f);
             EndEpisode();
         }
     }

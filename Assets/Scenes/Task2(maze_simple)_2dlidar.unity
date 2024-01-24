@@ -18608,7 +18608,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: bce88f29d48e1a56caf8a2032a44238b, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 06ad674bb13ed440a8567fb4d723ec68, type: 3}
   m_InferenceDevice: 1
   m_BehaviorType: 0
   m_BehaviorName: RollerBall
