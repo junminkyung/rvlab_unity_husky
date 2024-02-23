@@ -9,8 +9,8 @@ using UnitySensors;
 public class singong1 : Agent
 {
     public ArticulationBody aBody;
-    public float RotSpeed = 3;
-    public float LinearSpeed = 5;
+    public float RotSpeed = 3f;
+    public float LinearSpeed = 5f;
     public Transform Target;
     public VelodyneSensor LiDAR;
     
@@ -29,12 +29,12 @@ public class singong1 : Agent
     {
         aBody.angularVelocity = Vector3.zero;
         aBody.velocity = Vector3.zero;
-        aBody.TeleportRoot(new Vector3(-0.4f, -0.7f, 0.8f), Quaternion.Euler(0f, 0f, 0f));
+        aBody.TeleportRoot(new Vector3(-0.75f, 0.0f, -25.0f), Quaternion.Euler(0f, 0f, 0f));
 
         episodeStartTime = Time.time; 
 
         // Target을 Random함수를 활용해서 새로운 무작위 위치에 이동
-        Target.localPosition = new Vector3(15.0f, 0.0f, 51.0f);
+        Target.localPosition = new Vector3(16.0f, 1.0f, 26.0f);
 
         preDist = Vector3.Magnitude(Target.position - aBody.transform.position);
     }
@@ -44,44 +44,18 @@ public class singong1 : Agent
         // Target/Agent의 위치 정보 수집
         sensor.AddObservation(Target.localPosition);
         sensor.AddObservation(aBody.transform.localPosition);
-        // sensor.AddObservation(aBody.transform.localEulerAngles);
-        // sensor.AddObservation(aBody.transform.position - Target.position);
 
         // Agent의 velocity 정보 수집
         sensor.AddObservation(aBody.velocity.x);
         sensor.AddObservation(aBody.velocity.z);
         
         LiDAR.CompleteJob();
-        // for (int i = 0; i < LiDAR.pointsNum; i++)
-        // {
-        //     Vector3 point = LiDAR.points[i];
-        //     // Debug.Log($"LiDAR Observation {i}: Point = {point}");
-        //     sensor.AddObservation(point);
-        //     // float distance = LiDAR.distances[i];
-        //     // Debug.Log($"LiDAR Observation {i}: distance = {distance}");
-        //     // sensor.AddObservation(distance);
-        // }
-        //
+
         float[] laserScanRanges = LiDAR.GetDistances();
         foreach (float range in laserScanRanges)
         {
             sensor.AddObservation(range);
         }
-        // Vector3[] lidarPoints = LiDAR.GetPoints();
-        // foreach (Vector3 point in lidarPoints)
-        // {
-        //     sensor.AddObservation(point);
-        // }
-        // Vector3[] lidarPointsWorld = LiDAR.GetPointsWorld();
-        // foreach (Vector3 pointworld in lidarPointsWorld)
-        // {
-        //     sensor.AddObservation(pointworld);
-        // }
-        // float[] lidarIntensities = LiDAR.GetIntensities();
-        // foreach (float intensities in lidarIntensities)
-        // {
-        //     sensor.AddObservation(intensities);
-        // }
     }
 
     private void Drive(float Input_Linear_Vel, float Input_Angular_Vel)
@@ -101,29 +75,20 @@ public class singong1 : Agent
 
         // Agent와 Target사이의 거리를 측정
         float distance = Vector3.Magnitude(Target.position - aBody.transform.position);
-        
-        // float distanceToTarget = Vector3.Distance(aBody.transform.localPosition, Target.localPosition);
-        // if (distance <= 1.42f)
-        // {   
-        //     SetReward(1.0f);
-        //     EndEpisode();
-        // }
-        
-        // Debug.Log($"Distance to Target: {distance}");
 
         if (distance <= 1.42f)
         {
-            SetReward(1.0f);
+            SetReward(10.0f);
             EndEpisode();
         }
-        // else
-        // {
-        //     float reward = preDist - distance;
-        //     // Debug.Log($"reward: {preDist}, {distance
-        //     // }, {reward}");
-        //     SetReward(reward);
-        //     preDist = distance;
-        // }
+        else
+        {
+            float reward = preDist - distance;
+            // Debug.Log($"reward: {preDist}, {distance
+            // }, {reward}");
+            SetReward(reward);
+            preDist = distance;
+        }
         
         if (Time.time - episodeStartTime >= episodeTimeoutSeconds)
         {
@@ -142,12 +107,6 @@ public class singong1 : Agent
             EndEpisode();
         }
 
-        if (coll.gameObject.CompareTag("Partition"))
-        {   
-            // Debug.Log("Hit Partition");
-            SetReward(-1.0f);
-            EndEpisode();
-        }
     }
     
     public override void Heuristic(in ActionBuffers actionsOut)
