@@ -9,13 +9,12 @@ using UnitySensors;
 public class singong_ros : Agent
 {
     public ArticulationBody aBody;
-    public float RotSpeed = 0.6f;
-    public float LinearSpeed = 1f;
+    public float RotSpeed = 1.2f;
+    public float LinearSpeed = 0.5f;
     public Transform Target;
     public VelodyneSensor LiDAR;
-    // public RosSubscriberExample LiDAR;
     
-    public float episodeTimeoutSeconds = 60.0f; // 에피소드의 최대 시간 (예: 60초)
+    public float episodeTimeoutSeconds = 200.0f; // 에피소드의 최대 시간 (예: 60초)
     private float episodeStartTime; // 에피소드 시작 시간
 
     public float preDist;
@@ -50,19 +49,12 @@ public class singong_ros : Agent
         sensor.AddObservation(aBody.velocity.x);
         sensor.AddObservation(aBody.velocity.z);
         
-        // float[] laserScanRanges = LiDAR.ranges;
+        LiDAR.CompleteJob();
+
         float[] laserScanRanges = LiDAR.GetDistances();
-        // for (int i = 0; i < laserScanRanges.Length; i++)
-        // {
-        //     if (float.IsInfinity(laserScanRanges[i]))
-        //     {
-        //         laserScanRanges[i] = 200.0f;
-        //     }
-        // }
         foreach (float range in laserScanRanges)
         {
             sensor.AddObservation(range);
-            // Debug.Log($"range: {range}");
         }
     }
 
