@@ -61,9 +61,9 @@ public class TwistMsgPublisher : MonoBehaviour
         angularVelocity = -angularVelocity;
         previousRotation = publishedTransform.rotation.eulerAngles;
 
-		angularVelocity.x = Mathf.Clamp(angularVelocity.x, -1.2f, 1.2f);
-    	angularVelocity.y = Mathf.Clamp(angularVelocity.y, -1.2f, 1.2f);
-    	angularVelocity.z = Mathf.Clamp(angularVelocity.z, -1.2f, 1.2f);
+		// angularVelocity.x = Mathf.Clamp(angularVelocity.x, -1.2f, 1.2f);
+    	// angularVelocity.y = Mathf.Clamp(angularVelocity.y, -1.2f, 1.2f);
+    	// angularVelocity.z = Mathf.Clamp(angularVelocity.z, -1.2f, 1.2f);
 
         twist.linear = linearVelocity.To<FLU>();
         twist.angular = angularVelocity.To<FLU>();

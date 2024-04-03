@@ -6,15 +6,98 @@
   <component name="ChangeListManager">
     <list default="true" id="e47b10c6-9324-47fb-a6d4-b28c5db7716f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RVLab-HUSKY/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RVLab-HUSKY/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231107_RollerHusky_01.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231107_RollerHusky_01.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231108_RollerHusky_02.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231108_RollerHusky_02.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231108_RollerHusky_03.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231108_RollerHusky_03.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231119_RollerHusky_Task2_01.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231119_RollerHusky_Task2_01.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231201_tast2_2dlidar_04.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231201_tast2_2dlidar_04.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231204_task2_2dlidar_05.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231204_task2_2dlidar_05.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231213_task2_2dlidar_08.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231213_task2_2dlidar_08.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231213_task2_2dlidar_09.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231213_task2_2dlidar_09.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231214_task2_2dlidar_10.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231214_task2_2dlidar_10.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231219_task2_2dlidar_11.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231219_task2_2dlidar_11.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231219_task2_no2dlidar_12.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231219_task2_no2dlidar_12.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231219_task2_no2dlidar_13.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231219_task2_no2dlidar_13.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231220_task2_2dlidar_14.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231220_task2_2dlidar_14.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231226_task2_2dlidar_15.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231226_task2_2dlidar_15.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231226_task2_2dlidar_16.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231226_task2_2dlidar_16.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231226_task2_2dlidar_17.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231226_task2_2dlidar_17.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231227_task2_2dlidar_18.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231227_task2_2dlidar_18.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231227_task2_2dlidar_19.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231227_task2_2dlidar_19.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231228_task2_2dlidar_21.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/231228_task2_2dlidar_21.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240102_task2_2dlidar_22.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240102_task2_2dlidar_22.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240104_task2_2dlidar_25.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240104_task2_2dlidar_25.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240110_task2_2dlidar_14.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240110_task2_2dlidar_14.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240110_task2_2dlidar_18.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240110_task2_2dlidar_18.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240110_task2_2dlidar_18_2.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240110_task2_2dlidar_18_2.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_23.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_23.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_30.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_30.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_31.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_31.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_32.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240111_task2_2dlidar_32.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240115_task2_2dlidar_33.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240115_task2_2dlidar_33.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240119_task2_nolidar_41.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240119_task2_nolidar_41.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240122_task2_nolidar_42.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240122_task2_nolidar_42.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240122_task2_nolidar_43.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240122_task2_nolidar_43.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240206_singong_3F_01.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240206_singong_3F_01.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240220_singong_3F.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240220_singong_3F.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240229_905_singong_3F_01.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240229_905_singong_3F_01.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240306_singong_01.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240306_singong_01.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240306_singong_02.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240306_singong_02.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240306_singong_05.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240306_singong_05.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240307_singong_06.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240307_singong_06.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240314_singong_3F_01.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240314_singong_3F_01.onnx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240318_singong_3F_02.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/240318_singong_3F_02.onnx.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/singong_ros_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/singong_ros_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ML-Agents/Timers/singong_timers.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ML-Agents/Timers/singong_timers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/NEO/.thumbs/256x256/NEO.usd.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/NEO/.thumbs/256x256/NEO.usd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NeoURDF/NEO/NEO.usd" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NeoURDF/NEO/NEO.usd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/singong.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/singong.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/maze.dae.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/maze.dae.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ROSConnectionPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ROSConnectionPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/husky_sample.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/husky_sample.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/singong_ros.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/singong_ros.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ROS/TwistPublisher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ROS/TwistPublisher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RosSubscriberExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RosSubscriberExample.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/singong_ros.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/singong_ros.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,29 +111,42 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Laser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ROS/JointStatePublisher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ROS/LaserScanPublisher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ROS/ROSTransformTreePublisher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ROS/PoseStampedPublisher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ROS/ROSTransformTreePublisher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ROS/TwistPublisher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ROS/TwistStampedPublisher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RosPublisherExample.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RosSubscriberExample.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RollerHusky.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RosPublisherExample.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RosSubscriberExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Task2_Roller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Task2_Roller_laser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Task2_velodyne.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/singong1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/singong_ros.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/sub_Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/singong1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/singong_ros.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/singong_ros_long.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/sub_Test.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors-ros@fe2e6f2e2b/Runtime/Scripts/Publishers/LiDAR/Velodyne/VelodynePublisher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors-ros@fe2e6f2e2b/Runtime/Scripts/Publishers/TF/TFPublisher.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Sensors/LiDAR/Velodyne/VelodyneSensor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Sensors/LiDAR/Velodyne/VelodyneSensor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Utils/ScanPattern/RotatingLiDARScanPattern/RotatingLiDARScanPattern.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Utils/ScanPattern/ScanPattern.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Utils/ScanPattern/ScanPattern.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Visualizers/LiDAR/PointsMesh/PointsMeshGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.frj.unity-sensors@fe2e6f2e2b/Runtime/Scripts/Visualizers/LiDAR/Velodyne/VelodynePointsMeshGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.ros-tcp-connector@c27f00c6cf/Runtime/Messages/Sensor/msg/LaserScanMsg.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.ros-tcp-connector@c27f00c6cf/Runtime/ROSGeometry/CoordinateSpaces.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.ros-tcp-connector@c27f00c6cf/Runtime/TcpConnector/HudPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.ros-tcp-connector@c27f00c6cf/Runtime/TcpConnector/HudWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.visualizations@c27f00c6cf/Editor/LaserScanVisualizerSettingsEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.visualizations@c27f00c6cf/Runtime/DefaultVisualizers/Geometry/PoseDefaultVisualizer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.visualizations@c27f00c6cf/Runtime/DefaultVisualizers/Geometry/TwistDefaultVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.visualizations@c27f00c6cf/Runtime/DefaultVisualizers/Nav/OdometryDefaultVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.robotics.visualizations@c27f00c6cf/Runtime/DefaultVisualizers/Sensor/LaserScanDefaultVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../ml-agents-release_19_before/com.unity.ml-agents/Runtime/Utilities.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
   </component>
@@ -86,7 +182,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+  <component name="RunManager" selected="Standalone Player.Start Unity">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Unity/Hub/Editor/2022.3.16f1/Editor/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
@@ -150,12 +246,18 @@
       <workItem from="1709770527762" duration="2740000" />
       <workItem from="1709791271747" duration="7120000" />
       <workItem from="1709879539883" duration="944000" />
+      <workItem from="1710395186681" duration="12634000" />
+      <workItem from="1710807538094" duration="20056000" />
+      <workItem from="1711429617776" duration="6712000" />
+      <workItem from="1711524481097" duration="87000" />
+      <workItem from="1711524574372" duration="1273000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
