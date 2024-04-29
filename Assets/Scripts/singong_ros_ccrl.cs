@@ -6,7 +6,7 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using UnitySensors;
 
-public class singong_ros : Agent
+public class singong_ros_ccrl : Agent
 {
     public ArticulationBody aBody;
     public float RotSpeed = 3.0f;
@@ -41,9 +41,16 @@ public class singong_ros : Agent
         // aBody.TeleportRoot(selectedPosition, Quaternion.Euler(0f, 0f, 0f));
         
         episodeStartTime = Time.time; 
-
+        
+        // 직선 goal
+        // Target.localPosition = new Vector3(-0.6f, 1.0f, 25.7f);  
+        
+        // 교차로 goal
+        // Target.localPosition = new Vector3(9.32f, 1.0f, -13.51f);
+        
+        // 신공 goal
         Target.localPosition = new Vector3(14.9f, 1.0f, 25.7f);
-
+        
         preDist = Vector3.Magnitude(Target.position - aBody.transform.position);
     }
 
@@ -59,12 +66,16 @@ public class singong_ros : Agent
         sensor.AddObservation(aBody.velocity.z);
 
         float[] laserScanRanges = LiDAR.GetDistances();
-
+		// float[] laserIntensities = LiDAR.GetIntensities();
         foreach (float range in laserScanRanges)
         {
             sensor.AddObservation(range);
             // Debug.Log($"range: {range}");
         }
+		// foreach (float intensities in laserIntensities)
+        // {
+        //     Debug.Log($"intensities: {intensities}");
+        // }
     }
 
     private void Drive(float Input_Linear_Vel, float Input_Angular_Vel)

@@ -6,13 +6,15 @@ using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
 using UnitySensors;
 
-public class singong_ros : Agent
+public class singong_ros_image : Agent
 {
     public ArticulationBody aBody;
     public float RotSpeed = 3.0f;
     public float LinearSpeed = 5.0f;
     public Transform Target;
     public VelodyneSensor LiDAR;
+
+    public ImageSubscriber Image;
     // public RosSubscriberExample ROS;
     
     public float episodeTimeoutSeconds = 100.0f; // 에피소드의 최대 시간 (예: 60초)
@@ -41,9 +43,16 @@ public class singong_ros : Agent
         // aBody.TeleportRoot(selectedPosition, Quaternion.Euler(0f, 0f, 0f));
         
         episodeStartTime = Time.time; 
-
+        
+        // 직선 goal
+        // Target.localPosition = new Vector3(-0.6f, 1.0f, 25.7f);  
+        
+        // 교차로 goal
+        // Target.localPosition = new Vector3(9.32f, 1.0f, -13.51f);
+        
+        // 신공 goal
         Target.localPosition = new Vector3(14.9f, 1.0f, 25.7f);
-
+        
         preDist = Vector3.Magnitude(Target.position - aBody.transform.position);
     }
 
@@ -51,20 +60,25 @@ public class singong_ros : Agent
     {   
         // Target/Agent의 위치 정보 수집
         sensor.AddObservation(Target.localPosition);
-        sensor.AddObservation(aBody.transform.localPosition);
+        // sensor.AddObservation(Image.);
+        // sensor.AddObservation(aBody.transform.localPosition);
         // Debug.Log($"aBody.transform.localPosition: {aBody.transform.localPosition}");
 
         // Agent의 velocity 정보 수집
-        sensor.AddObservation(aBody.velocity.x);
-        sensor.AddObservation(aBody.velocity.z);
-
-        float[] laserScanRanges = LiDAR.GetDistances();
-
-        foreach (float range in laserScanRanges)
-        {
-            sensor.AddObservation(range);
-            // Debug.Log($"range: {range}");
-        }
+  //       sensor.AddObservation(aBody.velocity.x);
+  //       sensor.AddObservation(aBody.velocity.z);
+  //
+  //       float[] laserScanRanges = LiDAR.GetDistances();
+		// // float[] laserIntensities = LiDAR.GetIntensities();
+  //       foreach (float range in laserScanRanges)
+  //       {
+  //           sensor.AddObservation(range);
+  //           // Debug.Log($"range: {range}");
+  //       }
+		// foreach (float intensities in laserIntensities)
+        // {
+        //     Debug.Log($"intensities: {intensities}");
+        // }
     }
 
     private void Drive(float Input_Linear_Vel, float Input_Angular_Vel)
