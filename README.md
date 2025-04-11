@@ -35,7 +35,7 @@ rvlab_unity_husky/
 ├── docs/                     # Research documents and presentation materials 
 │ ├── Unity_sim2real.pdf 
 │ ├── Unity_SimpleMaze.pdf 
-│ └── poster_KRoS2025.pdf     # Poster presented at the 2025 Korean Robotics Society 
+│ └── poster_KROS2025.pdf     # Poster presented at the 2025 Korean Robotics Society 
 ├── README.md 
 └── .gitignore 
 ``` </pre>
