@@ -26,13 +26,24 @@ The goal was to develop an end-to-end RL pipeline for autonomous navigation, usi
 - Additional modeling and validation using NVIDIA Isaac Sim for high-fidelity digital twin.
 
 ## 📁 Directory Structure
-rvlab_unity_husky/ ├── UnityProject/ # Unity ML-Agents project (Assets, Scripts, etc.) ├── sim2real_ws/ # ROS workspace for Unity-ROS communication │ └── src/ │ └── husky_rl_pkg/ # Custom ROS package for Husky control and integration ├── docs/ # Research documents and presentation materials │ ├── Unity_sim2real.pdf │ ├── Unity_SimpleMaze.pdf │ └── poster_KRoS2025.pdf # Poster presented at the 2025 Korean Robotics Society ├── README.md └── .gitignore
+
+rvlab_unity_husky/ 
+├── UnityProject/
+├── sim2real_ws/
+│ └── src/ 
+│  └── husky_rl_pkg/
+├── docs/
+│ ├── Unity_sim2real.pdf 
+│ ├── Unity_SimpleMaze.pdf 
+│ └── poster_KRoS2025.pdf
+├── README.md 
+└── .gitignore
 
 ## 🗂 Related Materials
 
 - 📘 `Unity_sim2real.pdf`: Overview of reinforcement learning applied to real Husky using LiDAR data.  
 - 📘 `Unity_SimpleMaze.pdf`: Reward shaping strategies in a simple maze simulation.  
-- 📘 `포스터 발표_전민경.pdf`: Poster presented at a domestic robotics conference based on this work.
+- 📘 `poster_presentation.pdf`: Poster presented at a domestic robotics conference based on this work.
 
 ## 🧾 Presentation
 
@@ -42,6 +53,7 @@ under the title:
 
 
 ## 🧑‍🔬 Author
+
 Minkyung Jun (전민경)  
 Department of Mechanical Engineering  
 Konkuk University, Robot and Virtual Reality Lab(RV Lab)
