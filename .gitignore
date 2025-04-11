@@ -35,6 +35,9 @@ install/
 log/
 *.pyc
 *.swp
+sim2real_ws/build/
+sim2real_ws/devel/
+sim2real_ws/install/
 
 # === OS, 기타 ===
 .DS_Store

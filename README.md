@@ -26,6 +26,32 @@ The goal was to develop an end-to-end RL pipeline for autonomous navigation, usi
 - Evaluated performance in real indoor environments.
 - Additional modeling and validation using NVIDIA Isaac Sim for high-fidelity digital twin.
 
+## Directory
+rvlab_unity_husky/
+├── UnityProject/
+├── sim2real_ws/               # Unity-ROS 연동용 ROS 워크스페이스
+│   └── src/
+│       ├── husky_rl_pkg/
+├── docs/                      # 연구 문서 PDF 파일
+│   ├── Unity_sim2real.pdf
+│   ├── Unity_SimpleMaze.pdf
+│   ├── 포스터 발표_전민경.pdf
+├── README.md
+└── .gitignore
+
+## 🗂 Related Materials
+
+- 📘 `Unity_sim2real.pdf`: Overview of reinforcement learning applied to real Husky using LiDAR data.  
+- 📘 `Unity_SimpleMaze.pdf`: Reward shaping strategies in a simple maze simulation.  
+- 📘 `포스터 발표_전민경.pdf`: Poster presented at a domestic robotics conference based on this work.
+
+## 🧾 Presentation
+
+This project was presented as a poster at the **2025 KROS**  
+under the title:  
+**"Reinforcement Learning-Based Path Planning for Mobile Robot in a Digital Twin Environment"**
+
+
 ## 🧑‍🔬 Author
 Minkyung Jun (전민경)  
 Department of Mechanical Engineering  
