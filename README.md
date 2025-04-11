@@ -1,5 +1,4 @@
-# RVLab-HUSKY(2023.09 ~ 2024.04)
-# Reinforcement Learning for Husky Robot using Unity ML-Agents
+# Reinforcement Learning for Husky Robot using Unity ML-Agents (2023.09 ~ 2024.04)
 
 This project explores reinforcement learning (RL) on a real Husky robot using the Unity ML-Agents platform, conducted between **September 2023 and April 2024** at Konkuk University.
 
