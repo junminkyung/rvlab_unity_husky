@@ -25,18 +25,8 @@ The goal was to develop an end-to-end RL pipeline for autonomous navigation, usi
 - Evaluated performance in real indoor environments.
 - Additional modeling and validation using NVIDIA Isaac Sim for high-fidelity digital twin.
 
-## Directory
-rvlab_unity_husky/
-├── UnityProject/
-├── sim2real_ws/               # Unity-ROS 연동용 ROS 워크스페이스
-│   └── src/
-│       ├── husky_rl_pkg/
-├── docs/                      # 연구 문서 PDF 파일
-│   ├── Unity_sim2real.pdf
-│   ├── Unity_SimpleMaze.pdf
-│   ├── 포스터 발표_전민경.pdf
-├── README.md
-└── .gitignore
+## 📁 Directory Structure
+rvlab_unity_husky/ ├── UnityProject/ # Unity ML-Agents project (Assets, Scripts, etc.) ├── sim2real_ws/ # ROS workspace for Unity-ROS communication │ └── src/ │ └── husky_rl_pkg/ # Custom ROS package for Husky control and integration ├── docs/ # Research documents and presentation materials │ ├── Unity_sim2real.pdf │ ├── Unity_SimpleMaze.pdf │ └── poster_KRoS2025.pdf # Poster presented at the 2025 Korean Robotics Society ├── README.md └── .gitignore
 
 ## 🗂 Related Materials
 
