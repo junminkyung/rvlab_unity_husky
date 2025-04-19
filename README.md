@@ -52,6 +52,9 @@ This project was presented as a poster at the **2025 KROS**
 under the title:  
 **"Reinforcement Learning-Based Path Planning for Mobile Robot in a Digital Twin Environment"**
 
+# Video
+https://youtu.be/7N3GAzfNiMA
+https://youtube.com/shorts/5TcEWVPBE3E?feature=share
 
 ## 🧑‍🔬 Author
 
