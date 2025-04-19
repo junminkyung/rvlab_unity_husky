@@ -53,8 +53,8 @@ under the title:
 **"Reinforcement Learning-Based Path Planning for Mobile Robot in a Digital Twin Environment"**
 
 # Video
-https://youtu.be/7N3GAzfNiMA
-https://youtube.com/shorts/5TcEWVPBE3E?feature=share
+1) https://youtu.be/7N3GAzfNiMA
+2) https://youtube.com/shorts/5TcEWVPBE3E?feature=share
 
 ## 🧑‍🔬 Author
 
