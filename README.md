@@ -54,7 +54,7 @@ under the title:
 
 # Video
 1) https://youtu.be/7N3GAzfNiMA
-2) https://youtube.com/shorts/5TcEWVPBE3E?feature=share
+2) https://youtube.com/shorts/4yMeqzcyT-4?feature=share
 
 ## 🧑‍🔬 Author
 
