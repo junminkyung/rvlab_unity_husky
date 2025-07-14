@@ -32,25 +32,9 @@ rvlab_unity_husky/
 ├── sim2real_ws/              # ROS workspace for Unity-ROS communication 
 │   └── src/ 
 │     └── husky_rl_pkg/       # Custom ROS package for Husky control and integration 
-├── docs/                     # Research documents and presentation materials 
-│ ├── Unity_sim2real.pdf 
-│ ├── Unity_SimpleMaze.pdf 
-│ └── poster_KROS2025.pdf     # Poster presented at the 2025 Korean Robotics Society 
 ├── README.md 
 └── .gitignore 
 ``` </pre>
-
-## 🗂 Related Materials
-
-- 📘 `Unity_sim2real.pdf`: Overview of reinforcement learning applied to real Husky using LiDAR data.  
-- 📘 `Unity_SimpleMaze.pdf`: Reward shaping strategies in a simple maze simulation.  
-- 📘 `poster_presentation.pdf`: Poster presented at a domestic robotics conference based on this work.
-
-## 🧾 Presentation
-
-This project was presented as a poster at the **2025 KROS**  
-under the title:  
-**"Reinforcement Learning-Based Path Planning for Mobile Robot in a Digital Twin Environment"**
 
 # Video
 1) https://youtu.be/7N3GAzfNiMA
